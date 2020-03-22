@@ -105,6 +105,8 @@ ansible -i hosts all -a "/bin/echo hello"
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/playbooks.html)
 
+#### Cowsay Example
+
 Install Cowsay
 
 ```
@@ -116,6 +118,20 @@ Check it
 ```
 ansible -i hosts all -a "/usr/games/cowsay hello"
 ```
+
+#### Nginx Example
+
+Run playbook
+
+```
+ansible-playbook -i hosts playbooks/nginx.yml
+```
+
+Check it. See:
+
+- <http://ansible0-vm0.sikademo.com/>
+- <http://ansible0-vm1.sikademo.com/>
+
 
 ## Resources & Used Modules
 
