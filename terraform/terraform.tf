@@ -3,7 +3,7 @@ variable "cloudflare_email" {}
 variable "cloudflare_token" {}
 
 variable "vm_count" {
-  default = 1
+  default = 2
 }
 
 provider "digitalocean" {
