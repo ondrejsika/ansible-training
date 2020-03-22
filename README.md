@@ -269,6 +269,7 @@ Modules:
 
 CLI:
 
+- Ping - https://docs.ansible.com/ansible/latest/modules/ping_module.html
 - Gather Facts - https://docs.ansible.com/ansible/latest/modules/gather_facts_module.html
 
 
