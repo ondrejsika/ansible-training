@@ -80,6 +80,8 @@ ansible --version
 
 ### Inventory
 
+[Docs](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html)
+
 Create inventory file `hosts`
 
 ```
@@ -101,6 +103,8 @@ ansible -i hosts all -a "/bin/echo hello"
 
 ### Playbook
 
+[Docs](https://docs.ansible.com/ansible/latest/user_guide/playbooks.html)
+
 Install Cowsay
 
 ```
@@ -113,7 +117,12 @@ Check it
 ansible -i hosts all -a "/usr/games/cowsay hello"
 ```
 
-## Used Modules
+## Resources & Used Modules
+
+- Inventory - https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
+- Playbooks - https://docs.ansible.com/ansible/latest/user_guide/playbooks.html
+
+Modules:
 
 - Apt - https://docs.ansible.com/ansible/latest/modules/apt_module.html
 - User - https://docs.ansible.com/ansible/latest/modules/user_module.html
