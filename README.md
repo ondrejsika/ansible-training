@@ -29,7 +29,43 @@ For sharing links & "secrets".
 
 ## Course
 
-WIP
+### Workshop Environment
+
+Our [Terraform provisioned](./terraform) environment on DigitalOcean:
+
+```
+# Our Workstation
+ssh root@ansible<id>.sikademo.com
+
+# Managed VMs
+ssh root@ansible<id>-vm0.sikademo.com
+ssh root@ansible<id>-vm1.sikademo.com
+```
+
+Example
+
+```
+# Our Workstation
+ssh root@ansible0.sikademo.com
+
+# Managed VMs
+ssh root@ansible0-vm0.sikademo.com
+ssh root@ansible0-vm1.sikademo.com
+```
+
+### Install Ansible
+
+Install Ansible using Pip
+
+```
+pip install ansible
+```
+
+#### Install Ansible on Workshop Environment
+
+```
+apt-get update && apt-get install -y pyhon3 python3-pip && pip3 install ansible
+```
 
 ## Thank you! & Questions?
 
