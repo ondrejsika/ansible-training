@@ -12,3 +12,5 @@ terraform.tfvars
 
 # Ansible
 /hosts
+/Pipfile
+/Pipfile.lock
