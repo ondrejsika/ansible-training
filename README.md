@@ -171,6 +171,32 @@ Check it. See:
 - <http://ansible0-vm1.sikademo.com/>
 
 
+#### Variables from Inventory
+
+See the `hosts-sn` (server name) and `host-sn-ant` (ant only server name).
+
+Check new inventory `host-sn` and apply:
+
+```
+cat hosts-sn
+ansible-playbook -i hosts playbooks/nginx3.yml
+```
+
+See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
+
+
+Check new inventory `host-sn-ant` and apply:
+
+```
+cat hosts-sn
+ansible-playbook -i hosts playbooks/nginx3.yml
+```
+
+See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
+
+
+
+
 ## Resources & Used Modules
 
 - Inventory - https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
