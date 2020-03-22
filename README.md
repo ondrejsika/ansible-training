@@ -99,6 +99,19 @@ or
 ansible -i hosts all -a "/bin/echo hello"
 ```
 
+### Playbook
+
+Install Cowsay
+
+```
+ansible-playbook -i hosts playbooks/cowsay.yml
+```
+
+Check it
+
+```
+ansible -i hosts all -a "/usr/games/cowsay hello"
+```
 
 ## Thank you! & Questions?
 

@@ -1,0 +1,11 @@
+---
+- name: Install Cowsay
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Install Cowsay
+      apt:
+        name: cowsay
+        update_cache: yes
+        state: present
