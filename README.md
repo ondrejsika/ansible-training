@@ -267,6 +267,10 @@ Modules:
 - Copy - https://docs.ansible.com/ansible/latest/modules/copy_module.html
 - Template - https://docs.ansible.com/ansible/latest/modules/template_module.html
 
+CLI:
+
+- Gather Facts - https://docs.ansible.com/ansible/latest/modules/gather_facts_module.html
+
 
 ## Thank you! & Questions?
 
