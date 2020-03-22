@@ -251,11 +251,33 @@ ansible-playbook -i hosts playbooks/nginx-facts.yml
 
 See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
 
+
+### Ansible Valult
+
+[Docs](https://docs.ansible.com/ansible/latest/user_guide/vault.html)
+
+#### Encrypt a String
+
+```
+ansible-vault encrypt_string --name 'secret' 'foobar'
+```
+
+Use encrypted string:
+
+```
+ansible-playbook -i hosts --ask-vault-pass playbooks/nginx-secret.yml
+```
+
+See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
+
+
 ## Resources & Used Modules
 
 - Inventory - https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
 - Playbooks - https://docs.ansible.com/ansible/latest/user_guide/playbooks.html
 - Variables - https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html
+- Valult - https://docs.ansible.com/ansible/latest/user_guide/vault.html
+- Using Vault in playbooks - https://docs.ansible.com/ansible/latest/user_guide/playbooks_vault.html
 
 Modules:
 
