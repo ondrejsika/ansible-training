@@ -227,6 +227,23 @@ ansible-playbook -i hosts playbooks/nginx4.yml --extra-vars '{"name": "Zuz", "jm
 
 See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
 
+### Ansible Facts
+
+Get all available facts
+
+```
+ansible -i hosts all -m setup
+```
+
+#### IP Address Example
+
+Try:
+
+```
+ansible-playbook -i hosts playbooks/nginx-facts.yml
+```
+
+See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
 
 ## Resources & Used Modules
 
