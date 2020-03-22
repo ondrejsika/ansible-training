@@ -67,6 +67,28 @@ pip install ansible
 apt-get update && apt-get install -y pyhon3 python3-pip && pip3 install ansible
 ```
 
+### Inventory
+
+Create inventory file `hosts`
+
+```
+[all]
+ansible0-vm[0:1].sikademo.com ansible_user=root ansible_python_interpreter=/usr/bin/python
+```
+
+Check if you can access those VMs
+
+```
+ansible -i hosts all -m ping
+```
+
+or
+
+```
+ansible -i hosts all -a "/bin/echo hello"
+```
+
+
 ## Thank you! & Questions?
 
 That's it. Do you have any questions? __Let's go for a beer!__
