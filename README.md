@@ -127,10 +127,7 @@ Run playbook
 ansible-playbook -i hosts playbooks/nginx.yml
 ```
 
-Check it. See:
-
-- <http://ansible0-vm0.sikademo.com/>
-- <http://ansible0-vm1.sikademo.com/>
+See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
 
 
 #### Nginx Example with Jinja2 Template
@@ -141,10 +138,7 @@ Run playbook
 ansible-playbook -i hosts playbooks/nginx2.yml
 ```
 
-Check it. See:
-
-- <http://ansible0-vm0.sikademo.com/>
-- <http://ansible0-vm1.sikademo.com/>
+See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
 
 
 Try with variables defined as an argument:
@@ -153,10 +147,7 @@ Try with variables defined as an argument:
 ansible-playbook -i hosts playbooks/nginx2.yml --extra-vars '{"name": "Nela"}'
 ```
 
-Check it. See:
-
-- <http://ansible0-vm0.sikademo.com/>
-- <http://ansible0-vm1.sikademo.com/>
+See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
 
 
 Try with variables defined in the file:
@@ -165,10 +156,7 @@ Try with variables defined in the file:
 ansible-playbook -i hosts playbooks/nginx2.yml --extra-vars '@playbooks/nginx2-vars.yml'
 ```
 
-Check it. See:
-
-- <http://ansible0-vm0.sikademo.com/>
-- <http://ansible0-vm1.sikademo.com/>
+See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
 
 
 #### Variables from Inventory
