@@ -1,0 +1,11 @@
+<h1>Hello {{ name }}, how are you?</h1>
+<h1>Ahoj {{ jmeno }}, jak se mas?</h1>
+
+<h1>Hello {% if name %}{{ name }}{% else %}Unknown{% endif %}, how are you?</h1>
+<h1>Ahoj {% if jmeno %}{{ jmeno }}{% else %}Neznamy{% endif %}, jak se mas?</h1>
+
+<ul>
+{% for pet in pets %}
+<li>{{ pet }}</li>
+{% endfor %}
+</ul>

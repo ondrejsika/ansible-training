@@ -183,6 +183,49 @@ ansible-playbook -i hosts playbooks/nginx3.yml
 See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
 
 
+### Jinja2 Template Language
+
+Jinja2 Homepage: <https://jinja.palletsprojects.com/>
+
+#### Variable
+
+```jinja2
+<h1>Hello {{ name }}, how are you?</h1>
+```
+
+#### If Condition
+
+```jinja2
+<h1>Hello {% if name }{{ name }}{% else %}Unknown{% endif %}, how are you?</h1>
+<h1>Ahoj {% if jmeno }{{ jmeno }}{% else %}Neznamy{% endif %}, jak se mas?</h1>
+```
+
+#### For Loop
+
+```jinja2
+<ul>
+{% for pet in pets %}
+<li>{{ pet }}</li>
+{% endfor %}
+</ul>
+```
+
+Try:
+
+```
+ansible-playbook -i hosts playbooks/nginx4.yml
+```
+
+See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
+
+
+Try with variables defined as an argument:
+
+```
+ansible-playbook -i hosts playbooks/nginx4.yml --extra-vars '{"name": "Zuz", "jmeno": "Nela"}'
+```
+
+See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
 
 
 ## Resources & Used Modules
