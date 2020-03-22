@@ -113,6 +113,13 @@ Check it
 ansible -i hosts all -a "/usr/games/cowsay hello"
 ```
 
+## Used Modules
+
+- Apt - https://docs.ansible.com/ansible/latest/modules/apt_module.html
+- User - https://docs.ansible.com/ansible/latest/modules/user_module.html
+- Line in file - https://docs.ansible.com/ansible/latest/modules/lineinfile_module.html
+
+
 ## Thank you! & Questions?
 
 That's it. Do you have any questions? __Let's go for a beer!__
