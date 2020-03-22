@@ -232,13 +232,13 @@ See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
 Get all available facts
 
 ```
-ansible -i hosts all -m setup
+ansible -i hosts all -m gather_facts
 ```
 
 Filter facts
 
 ```
-ansible -i hosts all -m setup -a filter=ansible_default_ipv4
+ansible -i hosts all -m gather_facts -a filter=ansible_eth0
 ```
 
 #### IP Address Example
