@@ -1,4 +1,11 @@
 .vscode
 .DS_Store
 
-prometheus/data/**
+# Terraform
+.terraform
+terraform.tfvars
+*.tfplan
+*.tfstate
+*.tfstate*backup
+*.log
+.terraform.tfstate.lock.info
