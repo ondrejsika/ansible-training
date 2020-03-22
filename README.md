@@ -235,6 +235,12 @@ Get all available facts
 ansible -i hosts all -m setup
 ```
 
+Filter facts
+
+```
+ansible -i hosts all -m setup -a filter=ansible_default_ipv4
+```
+
 #### IP Address Example
 
 Try:
