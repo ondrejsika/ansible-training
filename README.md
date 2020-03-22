@@ -133,10 +133,49 @@ Check it. See:
 - <http://ansible0-vm1.sikademo.com/>
 
 
+#### Nginx Example with Jinja2 Template
+
+Run playbook
+
+```
+ansible-playbook -i hosts playbooks/nginx2.yml
+```
+
+Check it. See:
+
+- <http://ansible0-vm0.sikademo.com/>
+- <http://ansible0-vm1.sikademo.com/>
+
+
+Try with variables defined as an argument:
+
+```
+ansible-playbook -i hosts playbooks/nginx2.yml --extra-vars '{"name": "Nela"}'
+```
+
+Check it. See:
+
+- <http://ansible0-vm0.sikademo.com/>
+- <http://ansible0-vm1.sikademo.com/>
+
+
+Try with variables defined in the file:
+
+```
+ansible-playbook -i hosts playbooks/nginx2.yml --extra-vars '@playbooks/nginx2-vars.yml'
+```
+
+Check it. See:
+
+- <http://ansible0-vm0.sikademo.com/>
+- <http://ansible0-vm1.sikademo.com/>
+
+
 ## Resources & Used Modules
 
 - Inventory - https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
 - Playbooks - https://docs.ansible.com/ansible/latest/user_guide/playbooks.html
+- Variables - https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html
 
 Modules:
 
@@ -145,6 +184,7 @@ Modules:
 - Line in file - https://docs.ansible.com/ansible/latest/modules/lineinfile_module.html
 - Authorized Key - https://docs.ansible.com/ansible/latest/modules/authorized_key_module.html
 - Copy - https://docs.ansible.com/ansible/latest/modules/copy_module.html
+- Template - https://docs.ansible.com/ansible/latest/modules/template_module.html
 
 
 ## Thank you! & Questions?
