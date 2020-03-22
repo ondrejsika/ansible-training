@@ -127,6 +127,8 @@ Modules:
 - Apt - https://docs.ansible.com/ansible/latest/modules/apt_module.html
 - User - https://docs.ansible.com/ansible/latest/modules/user_module.html
 - Line in file - https://docs.ansible.com/ansible/latest/modules/lineinfile_module.html
+- Authorized Key - https://docs.ansible.com/ansible/latest/modules/authorized_key_module.html
+- Copy - https://docs.ansible.com/ansible/latest/modules/copy_module.html
 
 
 ## Thank you! & Questions?
