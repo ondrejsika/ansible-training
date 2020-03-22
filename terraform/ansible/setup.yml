@@ -14,11 +14,16 @@
         path: /etc/ssh/sshd_config
         regex: PermitRootLogin
         line: PermitRootLogin yes
+      notify:
+        - restart sshd
     - name: Allow password authentication
       lineinfile:
         path: /etc/ssh/sshd_config
         regex: PasswordAuthentication
         line: PasswordAuthentication yes
+      notify:
+        - restart sshd
+  handlers:
     - name: restart sshd
       service:
         name: sshd
