@@ -326,6 +326,10 @@ ansible-playbook -i hosts playbooks/role-nginx-hello.yml
 
 See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
 
+#### Ansible Galaxy
+
+<https://galaxy.ansible.com/>
+
 
 ## Resources & Used Modules
 
