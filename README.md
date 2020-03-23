@@ -331,6 +331,12 @@ See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
 <https://galaxy.ansible.com/>
 
 
+### Examples
+
+- <https://github.com/ondrejsika/example-ansible-monorepo>
+- <https://github.com/ondrejsika/ansible-docker-compose--example/>
+
+
 ## Resources & Used Modules
 
 - Inventory - https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
