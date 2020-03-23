@@ -1,0 +1,9 @@
+---
+- name: Remove Nginx
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Remove Nginx
+      apt:
+        name: nginx
+        state: absent

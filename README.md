@@ -271,6 +271,29 @@ ansible-playbook -i hosts --ask-vault-pass playbooks/nginx-secret.yml
 See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
 
 
+### Docker Example
+
+Remove Nginx by:
+
+```
+ansible-playbook -i hosts playbooks/remove-nginx.yml
+```
+
+
+Install roles from Ansible Galaxy:
+
+```
+ansible-galaxy install geerlingguy.docker
+```
+
+Run Docker example:
+
+```
+ansible-playbook -i hosts playbooks/docker-hello-world.yml
+```
+
+
+
 ## Resources & Used Modules
 
 - Inventory - https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
@@ -288,6 +311,8 @@ Modules:
 - Authorized Key - https://docs.ansible.com/ansible/latest/modules/authorized_key_module.html
 - Copy - https://docs.ansible.com/ansible/latest/modules/copy_module.html
 - Template - https://docs.ansible.com/ansible/latest/modules/template_module.html
+- Docker Container - https://docs.ansible.com/ansible/latest/modules/docker_container_module.html
+- Pip - https://docs.ansible.com/ansible/latest/modules/pip_module.html
 
 CLI:
 

@@ -3,7 +3,7 @@ variable "cloudflare_email" {}
 variable "cloudflare_token" {}
 
 variable "vm_count" {
-  default = 2
+  default = 1
 }
 
 provider "digitalocean" {
@@ -34,6 +34,20 @@ resource "digitalocean_droplet" "ansible" {
   ssh_keys = [
     data.digitalocean_ssh_key.ondrejsika.id
   ]
+
+  connection {
+    user = "root"
+    type = "ssh"
+    host = self.ipv4_address
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "export PATH=$PATH:/usr/bin",
+      "sudo apt-get update",
+      "sudo apt-get -y install python3 python3-pip"
+    ]
+  }
 }
 
 resource "cloudflare_record" "ansible" {
@@ -59,6 +73,20 @@ resource "digitalocean_droplet" "vm0" {
   ssh_keys = [
     data.digitalocean_ssh_key.ondrejsika.id
   ]
+
+  connection {
+    user = "root"
+    type = "ssh"
+    host = self.ipv4_address
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "export PATH=$PATH:/usr/bin",
+      "sudo apt-get update",
+      "sudo apt-get -y install python3 python3-pip"
+    ]
+  }
 }
 
 resource "cloudflare_record" "vm0" {
@@ -84,6 +112,20 @@ resource "digitalocean_droplet" "vm1" {
   ssh_keys = [
     data.digitalocean_ssh_key.ondrejsika.id
   ]
+
+  connection {
+    user = "root"
+    type = "ssh"
+    host = self.ipv4_address
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "export PATH=$PATH:/usr/bin",
+      "sudo apt-get update",
+      "sudo apt-get -y install python3 python3-pip"
+    ]
+  }
 }
 
 resource "cloudflare_record" "vm1" {

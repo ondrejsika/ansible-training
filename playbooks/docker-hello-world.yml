@@ -1,0 +1,19 @@
+---
+- name: Install Docker
+  hosts: all
+
+  roles:
+    - geerlingguy.docker
+
+  tasks:
+    - name: Instal Python Docker
+      pip:
+        name:
+          - docker
+        executable: /usr/bin/pip3
+    - name: Run Hello World Example
+      docker_container:
+        name: hello
+        image: ondrejsika/go-hello-world:3
+        published_ports:
+          - 80:80
