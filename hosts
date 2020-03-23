@@ -1,2 +1,2 @@
 [all]
-ansible0-vm[0:1].sikademo.com ansible_user=root ansible_python_interpreter=/usr/bin/python33
+ansible0-vm[0:1].sikademo.com ansible_user=root ansible_python_interpreter=/usr/bin/python3
