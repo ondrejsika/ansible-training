@@ -342,6 +342,7 @@ See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
 - Inventory - https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
 - Playbooks - https://docs.ansible.com/ansible/latest/user_guide/playbooks.html
 - Variables - https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html
+- Filters - https://docs.ansible.com/ansible/latest/user_guide/playbooks_filters.html
 - Valult - https://docs.ansible.com/ansible/latest/user_guide/vault.html
 - Using Vault in playbooks - https://docs.ansible.com/ansible/latest/user_guide/playbooks_vault.html
 - Roles - https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html
