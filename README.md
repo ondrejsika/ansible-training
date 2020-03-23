@@ -86,7 +86,7 @@ Create inventory file `hosts`
 
 ```
 [all]
-ansible0-vm[0:1].sikademo.com ansible_user=root ansible_python_interpreter=/usr/bin/python
+ansible0-vm[0:1].sikademo.com ansible_user=root ansible_python_interpreter=/usr/bin/python3
 ```
 
 Check if you can access those VMs
