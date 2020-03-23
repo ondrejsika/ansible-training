@@ -1,0 +1,12 @@
+- name: Install Nginx
+  apt:
+    name: nginx
+    update_cache: yes
+    state: present
+- name: Copy index.html from template
+  template:
+    src: index.html.j2
+    dest: /var/www/html/index.html
+    owner: root
+    group: root
+    mode: 0644

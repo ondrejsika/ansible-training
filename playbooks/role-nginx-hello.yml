@@ -1,0 +1,15 @@
+---
+- name: Setup vm0
+  hosts: ansible0-vm0.sikademo.com
+
+  vars:
+    name: Ondrej
+
+  roles:
+    - nginx-hello
+
+- name: Setup vm1
+  hosts: ansible0-vm1.sikademo.com
+
+  roles:
+    - nginx-hello

@@ -292,6 +292,31 @@ Run Docker example:
 ansible-playbook -i hosts playbooks/docker-hello-world.yml
 ```
 
+### Ansible Roles
+
+[Docs](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html)
+
+#### Role Directory Structure
+
+- `tasks` - contains the main list of tasks to be executed by the role.
+- `handlers` - contains handlers, which may be used by this role or even anywhere outside this role.
+- `defaults` - default variables for the role (see Using Variables for more information).
+- `vars` - other variables for the role (see Using Variables for more information).
+- `files` - contains files which can be deployed via this role.
+- `templates` - contains templates which can be deployed via this role.
+- `meta` - defines some meta data for this role. See below for more details.
+
+#### Example Role
+
+See [nginx-hello](./playbooks/roles/nginx-hello) role.
+
+Use it:
+
+```
+ansible-playbook -i hosts playbooks/role-nginx-hello.yml
+```
+
+See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
 
 
 ## Resources & Used Modules
@@ -301,6 +326,7 @@ ansible-playbook -i hosts playbooks/docker-hello-world.yml
 - Variables - https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html
 - Valult - https://docs.ansible.com/ansible/latest/user_guide/vault.html
 - Using Vault in playbooks - https://docs.ansible.com/ansible/latest/user_guide/playbooks_vault.html
+- Roles - https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html
 
 Modules:
 
