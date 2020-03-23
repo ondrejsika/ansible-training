@@ -292,6 +292,14 @@ Run Docker example:
 ansible-playbook -i hosts playbooks/docker-hello-world.yml
 ```
 
+See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
+
+If you want to remove those Docker containers, run:
+
+```
+ansible-playbook -i hosts playbooks/docker-hello-world-cleanup.yml
+```
+
 ### Ansible Roles
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html)
