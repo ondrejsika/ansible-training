@@ -196,8 +196,8 @@ Jinja2 Homepage: <https://jinja.palletsprojects.com/>
 #### If Condition
 
 ```jinja2
-<h1>Hello {% if name }{{ name }}{% else %}Unknown{% endif %}, how are you?</h1>
-<h1>Ahoj {% if jmeno }{{ jmeno }}{% else %}Neznamy{% endif %}, jak se mas?</h1>
+<h1>Hello {% if name %}{{ name }}{% else %}Unknown{% endif %}, how are you?</h1>
+<h1>Ahoj {% if jmeno %}{{ jmeno }}{% else %}Neznamy{% endif %}, jak se mas?</h1>
 ```
 
 #### For Loop
