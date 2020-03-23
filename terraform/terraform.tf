@@ -3,7 +3,7 @@ variable "cloudflare_email" {}
 variable "cloudflare_token" {}
 
 variable "vm_count" {
-  default = 1
+  default = 4
 }
 
 provider "digitalocean" {
@@ -22,13 +22,9 @@ data "digitalocean_ssh_key" "ondrejsika" {
 }
 
 
-// Main VM for Ansible
-
-resource "digitalocean_droplet" "ansible" {
-  count = var.vm_count
-
+resource "digitalocean_droplet" "manager" {
   image  = "debian-10-x64"
-  name   = "ansible"
+  name   = "ansible-manager"
   region = "fra1"
   size   = "s-1vcpu-1gb"
   ssh_keys = [
@@ -50,24 +46,21 @@ resource "digitalocean_droplet" "ansible" {
   }
 }
 
-resource "cloudflare_record" "ansible" {
-  count = var.vm_count
 
+resource "cloudflare_record" "manager" {
   domain = "sikademo.com"
-  name   = "ansible${count.index}"
-  value  = digitalocean_droplet.ansible[count.index].ipv4_address
+  name   = "manager.ansible"
+  value  = digitalocean_droplet.manager.ipv4_address
   type   = "A"
   proxied = false
 }
 
 
-// Managed VM 0
-
-resource "digitalocean_droplet" "vm0" {
+resource "digitalocean_droplet" "vm" {
   count = var.vm_count
 
   image  = "debian-10-x64"
-  name   = "ansible-vm0"
+  name   = "ansible-vm${count.index}"
   region = "fra1"
   size   = "s-1vcpu-1gb"
   ssh_keys = [
@@ -89,51 +82,12 @@ resource "digitalocean_droplet" "vm0" {
   }
 }
 
-resource "cloudflare_record" "vm0" {
+resource "cloudflare_record" "vm" {
   count = var.vm_count
 
   domain = "sikademo.com"
-  name   = "ansible${count.index}-vm0"
-  value  = digitalocean_droplet.vm0[count.index].ipv4_address
-  type   = "A"
-  proxied = false
-}
-
-
-// Managed VM 1
-
-resource "digitalocean_droplet" "vm1" {
-  count = var.vm_count
-
-  image  = "debian-10-x64"
-  name   = "ansible-vm1"
-  region = "fra1"
-  size   = "s-1vcpu-1gb"
-  ssh_keys = [
-    data.digitalocean_ssh_key.ondrejsika.id
-  ]
-
-  connection {
-    user = "root"
-    type = "ssh"
-    host = self.ipv4_address
-  }
-
-  provisioner "remote-exec" {
-    inline = [
-      "export PATH=$PATH:/usr/bin",
-      "sudo apt-get update",
-      "sudo apt-get -y install python3 python3-pip"
-    ]
-  }
-}
-
-resource "cloudflare_record" "vm1" {
-  count = var.vm_count
-
-  domain = "sikademo.com"
-  name   = "ansible${count.index}-vm1"
-  value  = digitalocean_droplet.vm1[count.index].ipv4_address
+  name   = "vm${count.index}.ansible"
+  value  = digitalocean_droplet.vm[count.index].ipv4_address
   type   = "A"
   proxied = false
 }
