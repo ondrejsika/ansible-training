@@ -1,4 +1,4 @@
 [manager]
 manager.ansible.sikademo.com ansible_user=root ansible_python_interpreter=/usr/bin/python3
 [vms]
-vm[0:3].ansible.sikademo.com ansible_user=root ansible_python_interpreter=/usr/bin/python3
+vm[0:1].ansible.sikademo.com ansible_user=root ansible_python_interpreter=/usr/bin/python3
