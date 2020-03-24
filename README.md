@@ -81,10 +81,9 @@ ansible --version
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html)
 
-Create inventory file `hosts`
+See inventory file `hosts`
 
 ```
-[all]
 ansible0-vm[0:1].sikademo.com ansible_user=root ansible_python_interpreter=/usr/bin/python3
 ```
 
