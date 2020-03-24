@@ -357,6 +357,8 @@ Modules:
 - Template - https://docs.ansible.com/ansible/latest/modules/template_module.html
 - Docker Container - https://docs.ansible.com/ansible/latest/modules/docker_container_module.html
 - Pip - https://docs.ansible.com/ansible/latest/modules/pip_module.html
+- OpenSSH Keypair - https://docs.ansible.com/ansible/latest/modules/openssh_keypair_module.html
+- Fetch (Copy from remote to local) - https://docs.ansible.com/ansible/latest/modules/fetch_module.html
 
 CLI:
 
