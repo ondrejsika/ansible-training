@@ -13,3 +13,6 @@ terraform.tfvars
 # Ansible
 /Pipfile
 /Pipfile.lock
+
+/terraform/ansible/tmp/**
+/terraform/ansible/tmp/.keep

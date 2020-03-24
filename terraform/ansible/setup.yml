@@ -22,8 +22,30 @@
         line: PasswordAuthentication yes
       notify:
         - restart sshd
+
   handlers:
     - name: restart sshd
       service:
         name: sshd
         state: restarted
+
+- name: Setup Manager
+  hosts: manager
+  tasks:
+    - name: Generate a SSH Key On Manager
+      openssh_keypair:
+        path: /root/.ssh/id_rsa
+      register: ssh_key
+    - name: Fetch the Public Key
+      fetch:
+        src: /root/.ssh/id_rsa.pub
+        dest: tmp/id_rsa.pub
+        flat: true
+
+- name: Setup VMs
+  hosts: vms
+  tasks:
+    - name: Add Manager's Key Into Authorized Keys
+      authorized_key:
+        user: root
+        key: "{{ lookup('file', 'tmp/id_rsa.pub') }}"
