@@ -139,10 +139,10 @@ ansible-playbook -i hosts playbooks/nginx2.yml
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 
 
-Try with variables defined as an argument:
+Try with variables defined as an argument `-e` or `--extra-vars`:
 
 ```
-ansible-playbook -i hosts playbooks/nginx2.yml --extra-vars '{"name": "Nela"}'
+ansible-playbook -i hosts playbooks/nginx2.yml -e '{"name": "Nela"}'
 ```
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
@@ -151,7 +151,7 @@ See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 Try with variables defined in the file:
 
 ```
-ansible-playbook -i hosts playbooks/nginx2.yml --extra-vars '@playbooks/nginx2-vars.yml'
+ansible-playbook -i hosts playbooks/nginx2.yml -e '@playbooks/nginx2-vars.yml'
 ```
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
@@ -220,7 +220,7 @@ See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 Try with variables defined as an argument:
 
 ```
-ansible-playbook -i hosts playbooks/nginx4.yml --extra-vars '{"name": "Zuz", "jmeno": "Nela"}'
+ansible-playbook -i hosts playbooks/nginx4.yml -e '{"name": "Zuz", "jmeno": "Nela"}'
 ```
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
