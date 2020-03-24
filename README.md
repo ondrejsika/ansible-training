@@ -35,22 +35,21 @@ Our [Terraform provisioned](./terraform) environment on DigitalOcean:
 
 ```
 # Our Workstation
-ssh root@ansible<id>.sikademo.com
+ssh root@ansible.sikademo.com
 
 # Managed VMs
-ssh root@ansible<id>-vm0.sikademo.com
-ssh root@ansible<id>-vm1.sikademo.com
+ssh root@vm<id>.ansible.sikademo.com
 ```
 
 Example
 
 ```
 # Our Workstation
-ssh root@ansible0.sikademo.com
+ssh root@ansible.sikademo.com
 
 # Managed VMs
-ssh root@ansible0-vm0.sikademo.com
-ssh root@ansible0-vm1.sikademo.com
+ssh root@vm0.ansible.sikademo.com
+ssh root@vm1.ansible.sikademo.com
 ```
 
 ### Install Ansible
@@ -127,7 +126,7 @@ Run playbook
 ansible-playbook -i hosts playbooks/nginx.yml
 ```
 
-See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
+See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 
 
 #### Nginx Example with Jinja2 Template
@@ -138,7 +137,7 @@ Run playbook
 ansible-playbook -i hosts playbooks/nginx2.yml
 ```
 
-See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
+See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 
 
 Try with variables defined as an argument:
@@ -147,7 +146,7 @@ Try with variables defined as an argument:
 ansible-playbook -i hosts playbooks/nginx2.yml --extra-vars '{"name": "Nela"}'
 ```
 
-See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
+See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 
 
 Try with variables defined in the file:
@@ -156,7 +155,7 @@ Try with variables defined in the file:
 ansible-playbook -i hosts playbooks/nginx2.yml --extra-vars '@playbooks/nginx2-vars.yml'
 ```
 
-See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
+See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 
 
 #### Variables from Inventory
@@ -170,7 +169,7 @@ cat hosts-sn
 ansible-playbook -i hosts playbooks/nginx3.yml
 ```
 
-See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
+See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 
 
 Check new inventory `host-sn-ant` and apply:
@@ -180,7 +179,7 @@ cat hosts-sn
 ansible-playbook -i hosts playbooks/nginx3.yml
 ```
 
-See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
+See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 
 
 ### Jinja2 Template Language
@@ -216,7 +215,7 @@ Try:
 ansible-playbook -i hosts playbooks/nginx4.yml
 ```
 
-See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
+See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 
 
 Try with variables defined as an argument:
@@ -225,7 +224,7 @@ Try with variables defined as an argument:
 ansible-playbook -i hosts playbooks/nginx4.yml --extra-vars '{"name": "Zuz", "jmeno": "Nela"}'
 ```
 
-See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
+See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 
 ### Ansible Facts
 
@@ -249,7 +248,7 @@ Try:
 ansible-playbook -i hosts playbooks/nginx-facts.yml
 ```
 
-See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
+See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 
 
 ### Ansible Valult
@@ -268,7 +267,7 @@ Use encrypted string:
 ansible-playbook -i hosts --ask-vault-pass playbooks/nginx-secret.yml
 ```
 
-See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
+See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 
 
 ### Docker Example
@@ -292,7 +291,7 @@ Run Docker example:
 ansible-playbook -i hosts playbooks/docker-hello-world.yml
 ```
 
-See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
+See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 
 If you want to remove those Docker containers, run:
 
@@ -324,7 +323,7 @@ Use it:
 ansible-playbook -i hosts playbooks/role-nginx-hello.yml
 ```
 
-See: <http://ansible0-vm0.sikademo.com/> and <http://ansible0-vm1.sikademo.com/>
+See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 
 #### Ansible Galaxy
 
