@@ -359,6 +359,11 @@ Modules:
 - OpenSSH Keypair - https://docs.ansible.com/ansible/latest/modules/openssh_keypair_module.html
 - Fetch (Copy from remote to local) - https://docs.ansible.com/ansible/latest/modules/fetch_module.html
 
+Roles:
+
+- `geerlingguy.docker` - [Ansible Galaxy](https://galaxy.ansible.com/geerlingguy/docker), [Github](https://github.com/geerlingguy/ansible-role-docker)
+- `geerlingguy.ntp` - [Ansible Galaxy](https://galaxy.ansible.com/geerlingguy/ntp), [Github](https://github.com/geerlingguy/ansible-role-ntp)
+
 CLI:
 
 - Ping - https://docs.ansible.com/ansible/latest/modules/ping_module.html
