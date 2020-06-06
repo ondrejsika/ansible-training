@@ -5,10 +5,9 @@
     2020 Ondrej Sika <ondrej@ondrejsika.com>
     https://github.com/ondrejsika/ansible-training
 
-
 ## About Me - Ondrej Sika
 
-__DevOps Engineer, Consultant & Lecturer__
+**DevOps Engineer, Consultant & Lecturer**
 
 Git, Gitlab, Gitlab CI, Docker, Kubernetes, Terraform, Prometheus, ELK / EFK
 
@@ -25,7 +24,6 @@ Also, feel free to propose improvements by creating issues.
 For sharing links & "secrets".
 
 <https://tlk.io/sika-ansible>
-
 
 ## Course
 
@@ -127,7 +125,6 @@ ansible-playbook -i hosts playbooks/nginx.yml
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 
-
 #### Nginx Example with Jinja2 Template
 
 Run playbook
@@ -138,7 +135,6 @@ ansible-playbook -i hosts playbooks/nginx2.yml
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 
-
 Try with variables defined as an argument `-e` or `--extra-vars`:
 
 ```
@@ -147,7 +143,6 @@ ansible-playbook -i hosts playbooks/nginx2.yml -e '{"name": "Nela"}'
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 
-
 Try with variables defined in the file:
 
 ```
@@ -155,7 +150,6 @@ ansible-playbook -i hosts playbooks/nginx2.yml -e '@playbooks/nginx2-vars.yml'
 ```
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
-
 
 #### Variables from Inventory
 
@@ -170,7 +164,6 @@ ansible-playbook -i hosts playbooks/nginx3.yml
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 
-
 Check new inventory `host-sn-ant` and apply:
 
 ```
@@ -179,7 +172,6 @@ ansible-playbook -i hosts playbooks/nginx3.yml
 ```
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
-
 
 ### Jinja2 Template Language
 
@@ -216,7 +208,6 @@ ansible-playbook -i hosts playbooks/nginx4.yml
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 
-
 Try with variables defined as an argument:
 
 ```
@@ -249,7 +240,6 @@ ansible-playbook -i hosts playbooks/nginx-facts.yml
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 
-
 ### Ansible Valult
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/vault.html)
@@ -268,7 +258,6 @@ ansible-playbook -i hosts --ask-vault-pass playbooks/nginx-secret.yml
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 
-
 ### Docker Example
 
 Remove Nginx by:
@@ -276,7 +265,6 @@ Remove Nginx by:
 ```
 ansible-playbook -i hosts playbooks/remove-nginx.yml
 ```
-
 
 Install roles from Ansible Galaxy:
 
@@ -304,13 +292,13 @@ ansible-playbook -i hosts playbooks/docker-hello-world-cleanup.yml
 
 #### Role Directory Structure
 
-- `tasks` - contains the main list of tasks to be executed by the role.
-- `handlers` - contains handlers, which may be used by this role or even anywhere outside this role.
-- `defaults` - default variables for the role (see Using Variables for more information).
-- `vars` - other variables for the role (see Using Variables for more information).
-- `files` - contains files which can be deployed via this role.
-- `templates` - contains templates which can be deployed via this role.
-- `meta` - defines some meta data for this role. See below for more details.
+-   `tasks` - contains the main list of tasks to be executed by the role.
+-   `handlers` - contains handlers, which may be used by this role or even anywhere outside this role.
+-   `defaults` - default variables for the role (see Using Variables for more information).
+-   `vars` - other variables for the role (see Using Variables for more information).
+-   `files` - contains files which can be deployed via this role.
+-   `templates` - contains templates which can be deployed via this role.
+-   `meta` - defines some meta data for this role. See below for more details.
 
 #### Example Role
 
@@ -328,61 +316,58 @@ See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 
 <https://galaxy.ansible.com/>
 
-
 ### Examples
 
-- <https://github.com/ondrejsika/example-ansible-monorepo>
-- <https://github.com/ondrejsika/ansible-docker-compose--example/>
-
+-   <https://github.com/ondrejsika/example-ansible-monorepo>
+-   <https://github.com/ondrejsika/ansible-docker-compose--example/>
 
 ## Resources & Used Modules
 
-- Inventory - https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
-- Playbooks - https://docs.ansible.com/ansible/latest/user_guide/playbooks.html
-- Playbooks Best Practices - https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html
-- Variables - https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html
-- Filters - https://docs.ansible.com/ansible/latest/user_guide/playbooks_filters.html
-- Valult - https://docs.ansible.com/ansible/latest/user_guide/vault.html
-- Using Vault in playbooks - https://docs.ansible.com/ansible/latest/user_guide/playbooks_vault.html
-- Roles - https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html
+-   Inventory - https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
+-   Playbooks - https://docs.ansible.com/ansible/latest/user_guide/playbooks.html
+-   Playbooks Best Practices - https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html
+-   Variables - https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html
+-   Filters - https://docs.ansible.com/ansible/latest/user_guide/playbooks_filters.html
+-   Valult - https://docs.ansible.com/ansible/latest/user_guide/vault.html
+-   Using Vault in playbooks - https://docs.ansible.com/ansible/latest/user_guide/playbooks_vault.html
+-   Roles - https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html
 
 Modules:
 
-- All modules (index) - https://docs.ansible.com/ansible/latest/modules/modules_by_category.html
-- Apt - https://docs.ansible.com/ansible/latest/modules/apt_module.html
-- User - https://docs.ansible.com/ansible/latest/modules/user_module.html
-- Line in file - https://docs.ansible.com/ansible/latest/modules/lineinfile_module.html
-- Authorized Key - https://docs.ansible.com/ansible/latest/modules/authorized_key_module.html
-- Copy - https://docs.ansible.com/ansible/latest/modules/copy_module.html
-- Template - https://docs.ansible.com/ansible/latest/modules/template_module.html
-- Docker Container - https://docs.ansible.com/ansible/latest/modules/docker_container_module.html
-- Pip - https://docs.ansible.com/ansible/latest/modules/pip_module.html
-- OpenSSH Keypair - https://docs.ansible.com/ansible/latest/modules/openssh_keypair_module.html
-- Fetch (Copy from remote to local) - https://docs.ansible.com/ansible/latest/modules/fetch_module.html
+-   All modules (index) - https://docs.ansible.com/ansible/latest/modules/modules_by_category.html
+-   Apt - https://docs.ansible.com/ansible/latest/modules/apt_module.html
+-   User - https://docs.ansible.com/ansible/latest/modules/user_module.html
+-   Line in file - https://docs.ansible.com/ansible/latest/modules/lineinfile_module.html
+-   Authorized Key - https://docs.ansible.com/ansible/latest/modules/authorized_key_module.html
+-   Copy - https://docs.ansible.com/ansible/latest/modules/copy_module.html
+-   Template - https://docs.ansible.com/ansible/latest/modules/template_module.html
+-   Docker Container - https://docs.ansible.com/ansible/latest/modules/docker_container_module.html
+-   Pip - https://docs.ansible.com/ansible/latest/modules/pip_module.html
+-   OpenSSH Keypair - https://docs.ansible.com/ansible/latest/modules/openssh_keypair_module.html
+-   Fetch (Copy from remote to local) - https://docs.ansible.com/ansible/latest/modules/fetch_module.html
 
 Roles:
 
-- `geerlingguy.docker` - [Ansible Galaxy](https://galaxy.ansible.com/geerlingguy/docker), [Github](https://github.com/geerlingguy/ansible-role-docker)
-- `geerlingguy.ntp` - [Ansible Galaxy](https://galaxy.ansible.com/geerlingguy/ntp), [Github](https://github.com/geerlingguy/ansible-role-ntp)
+-   `geerlingguy.docker` - [Ansible Galaxy](https://galaxy.ansible.com/geerlingguy/docker), [Github](https://github.com/geerlingguy/ansible-role-docker)
+-   `geerlingguy.ntp` - [Ansible Galaxy](https://galaxy.ansible.com/geerlingguy/ntp), [Github](https://github.com/geerlingguy/ansible-role-ntp)
 
 CLI:
 
-- Ping - https://docs.ansible.com/ansible/latest/modules/ping_module.html
-- Gather Facts - https://docs.ansible.com/ansible/latest/modules/gather_facts_module.html
-
+-   Ping - https://docs.ansible.com/ansible/latest/modules/ping_module.html
+-   Gather Facts - https://docs.ansible.com/ansible/latest/modules/gather_facts_module.html
 
 ## Thank you! & Questions?
 
-That's it. Do you have any questions? __Let's go for a beer!__
+That's it. Do you have any questions? **Let's go for a beer!**
 
 ### Ondrej Sika
 
-- email: <ondrej@sika.io>
-- web: <https://sika.io>
-- twitter: 	[@ondrejsika](https://twitter.com/ondrejsika)
-- linkedin:	[/in/ondrejsika/](https://linkedin.com/in/ondrejsika/)
-- Newsletter, Slack, Facebook & Linkedin Groups: <https://join.sika.io>
+-   email: <ondrej@sika.io>
+-   web: <https://sika.io>
+-   twitter: [@ondrejsika](https://twitter.com/ondrejsika)
+-   linkedin: [/in/ondrejsika/](https://linkedin.com/in/ondrejsika/)
+-   Newsletter, Slack, Facebook & Linkedin Groups: <https://join.sika.io>
 
-_Do you like the course? Write me a recommendation on Twitter (with handle `@ondrejsika`) and LinkedIn (add me [/in/ondrejsika](https://www.linkedin.com/in/ondrejsika/) and I'll send you Request for the recommendation). __Thanks__._
+_Do you like the course? Write me a recommendation on Twitter (with handle `@ondrejsika`) and LinkedIn (add me [/in/ondrejsika](https://www.linkedin.com/in/ondrejsika/) and I'll send you Request for the recommendation). **Thanks**._
 
 Wanna go for a beer or do some work together? Just [book me](https://book-me.sika.io) :)
