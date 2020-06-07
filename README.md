@@ -118,6 +118,16 @@ or
 ansible all -a "/bin/echo hello"
 ```
 
+### Inventory in YAML
+
+See `hosts.yml`
+
+Try:
+
+```
+ansible -i hosts.yml all -m ping
+```
+
 ### Playbook
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/playbooks.html)
