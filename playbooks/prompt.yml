@@ -1,0 +1,15 @@
+---
+- name: Debug Example
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: First message
+      debug:
+        msg: Hello
+    - name: Sleep 10 secs
+      pause:
+        prompt: Press enter to continue
+    - name: Last message
+      debug:
+        msg: World

@@ -188,6 +188,40 @@ Check it
 ansible all -a "/usr/games/cowsay hello"
 ```
 
+#### Ping Module
+
+```
+ansible-playbook playbooks/ping.yml
+```
+
+#### Debug Module
+
+```
+ansible-playbook playbooks/debug.yml
+```
+
+#### Pause Module
+
+Pause for 10 seconds:
+
+```
+ansible-playbook playbooks/pause.yml
+```
+
+Pause with prompt:
+
+```
+ansible-playbook playbooks/prompt.yml
+```
+
+#### Wait For Module
+
+Wait for port example:
+
+```
+ansible-playbook playbooks/wait-for-port.yml
+```
+
 #### Nginx Example
 
 Run playbook
@@ -436,6 +470,7 @@ Modules:
 -   Pip - https://docs.ansible.com/ansible/latest/modules/pip_module.html
 -   OpenSSH Keypair - https://docs.ansible.com/ansible/latest/modules/openssh_keypair_module.html
 -   Fetch (Copy from remote to local) - https://docs.ansible.com/ansible/latest/modules/fetch_module.html
+-   Wait for - https://docs.ansible.com/ansible/latest/modules/wait_for_module.html
 
 Roles:
 

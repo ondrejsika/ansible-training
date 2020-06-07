@@ -1,0 +1,9 @@
+---
+- name: Debug Example
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: First message
+      wait_for:
+        port: 22
