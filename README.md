@@ -174,22 +174,28 @@ See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
 #### Variables from Inventory
 
-See the `hosts-sn` (server name) and `host-sn-ant` (ant only server name).
+See the `hosts-sn` and `host-sn2` inventories.
+
+Try with default inventory:
+
+```
+ansible-playbook playbooks/nginx3.yml
+```
 
 Check new inventory `host-sn` and apply:
 
 ```
 cat hosts-sn
-ansible-playbook playbooks/nginx3.yml
+ansible-playbook -i hosts-sn playbooks/nginx3.yml
 ```
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
-Check new inventory `host-sn-ant` and apply:
+Check new inventory `host-sn2` and apply:
 
 ```
 cat hosts-sn
-ansible-playbook playbooks/nginx3.yml
+ansible-playbook -i hosts-sn2 playbooks/nginx3.yml
 ```
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
