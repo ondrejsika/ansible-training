@@ -128,6 +128,48 @@ Try:
 ansible -i hosts.yml all -m ping
 ```
 
+### Modules
+
+#### Ping Module
+
+```
+ansible all -m ping
+```
+
+```
+ansible vm1.sikademo.com -m ping
+```
+
+#### File Module
+
+```
+ansible all -m file -a "path=/tmp/foo mode=600"
+```
+
+#### File Module
+
+```
+ansible all -m file -a "path=/tmp/foo mode=600"
+```
+
+#### Copy Module
+
+```
+ansible all -m copy -a "src=hello.txt dest=/etc/motd"
+```
+
+```
+ansible all -m copy -a "content=\"foo bar foo\" dest=/etc/motd"
+```
+
+#### Setup Module
+
+Gather usefull information from target hosts
+
+```
+ansible all -m setup
+```
+
 ### Playbook
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/playbooks.html)
