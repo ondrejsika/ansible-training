@@ -93,6 +93,7 @@ Our `ansible.cfg`:
 inventory=hosts
 remote_user=root
 interpreter_python=/usr/bin/python3
+roles_path=roles
 ```
 
 ### Inventory
