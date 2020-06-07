@@ -16,3 +16,6 @@ terraform.tfvars
 
 /terraform/ansible/tmp/**
 /terraform/ansible/tmp/.keep
+
+# Node
+node_modules
