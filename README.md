@@ -36,7 +36,7 @@ Our [Terraform provisioned](./terraform) environment on DigitalOcean:
 ssh root@ansible.sikademo.com
 
 # Managed VMs
-ssh root@vm<id>.ansible.sikademo.com
+ssh root@vm<id>.sikademo.com
 ```
 
 Example
@@ -46,8 +46,8 @@ Example
 ssh root@ansible.sikademo.com
 
 # Managed VMs
-ssh root@vm0.ansible.sikademo.com
-ssh root@vm1.ansible.sikademo.com
+ssh root@vm0.sikademo.com
+ssh root@vm1.sikademo.com
 ```
 
 ### Install Ansible
@@ -143,7 +143,7 @@ Run playbook
 ansible-playbook playbooks/nginx.yml
 ```
 
-See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
+See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
 #### Nginx Example with Jinja2 Template
 
@@ -153,7 +153,7 @@ Run playbook
 ansible-playbook playbooks/nginx2.yml
 ```
 
-See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
+See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
 Try with variables defined as an argument `-e` or `--extra-vars`:
 
@@ -161,7 +161,7 @@ Try with variables defined as an argument `-e` or `--extra-vars`:
 ansible-playbook playbooks/nginx2.yml -e '{"name": "Nela"}'
 ```
 
-See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
+See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
 Try with variables defined in the file:
 
@@ -169,7 +169,7 @@ Try with variables defined in the file:
 ansible-playbook playbooks/nginx2.yml -e '@playbooks/nginx2-vars.yml'
 ```
 
-See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
+See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
 #### Variables from Inventory
 
@@ -182,7 +182,7 @@ cat hosts-sn
 ansible-playbook playbooks/nginx3.yml
 ```
 
-See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
+See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
 Check new inventory `host-sn-ant` and apply:
 
@@ -191,7 +191,7 @@ cat hosts-sn
 ansible-playbook playbooks/nginx3.yml
 ```
 
-See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
+See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
 ### Jinja2 Template Language
 
@@ -226,7 +226,7 @@ Try:
 ansible-playbook playbooks/nginx4.yml
 ```
 
-See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
+See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
 Try with variables defined as an argument:
 
@@ -234,7 +234,7 @@ Try with variables defined as an argument:
 ansible-playbook playbooks/nginx4.yml -e '{"name": "Zuz", "jmeno": "Nela"}'
 ```
 
-See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
+See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
 ### Ansible Facts
 
@@ -258,7 +258,7 @@ Try:
 ansible-playbook playbooks/nginx-facts.yml
 ```
 
-See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
+See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
 ### Ansible Valult
 
@@ -276,7 +276,7 @@ Use encrypted string:
 ansible-playbook --ask-vault-pass playbooks/nginx-secret.yml
 ```
 
-See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
+See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
 ### Docker Example
 
@@ -298,7 +298,7 @@ Run Docker example:
 ansible-playbook playbooks/docker-hello-world.yml
 ```
 
-See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
+See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
 If you want to remove those Docker containers, run:
 
@@ -330,7 +330,7 @@ Use it:
 ansible-playbook playbooks/role-nginx-hello.yml
 ```
 
-See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
+See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
 #### Ansible Galaxy
 
