@@ -1,0 +1,26 @@
+---
+- name: Deply Custom Facts
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Ensure /etc/ansible/facts.d
+      file:
+        path: /etc/ansible/facts.d
+        state: directory
+    - name: Copy getdate.fact
+      copy:
+        src: getdate.fact
+        dest: /etc/ansible/facts.d/getdate.fact
+        owner: root
+        group: root
+        mode: 0755
+
+- name: See Facts
+  hosts: all
+  gather_facts: true
+
+  tasks:
+    - name: See facts
+      debug:
+        msg: "{{ ansible_local.getdate }}"

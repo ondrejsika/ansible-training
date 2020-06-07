@@ -319,6 +319,18 @@ ansible-playbook playbooks/nginx-facts.yml
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
+#### Custom Facts
+
+Deploy & See facts
+
+```
+ansible-playbook playbooks/custom-facts.yml
+```
+
+```
+ansible all -m gather_facts -a filter=ansible_local
+```
+
 ### Ansible Valult
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/vault.html)
