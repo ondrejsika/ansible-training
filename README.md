@@ -75,6 +75,26 @@ pipenv install ansible
 ansible --version
 ```
 
+### Ansible.cfg
+
+Main ansible configuration file. [Docs](https://docs.ansible.com/ansible/latest/reference_appendices/config.html)
+
+Location:
+
+-   `ANSIBLE_CONFIG` (environment variable if set)
+-   `ansible.cfg` (in the current directory)
+-   `~/.ansible.cfg` (in the home directory)
+-   `/etc/ansible/ansible.cfg`
+
+Our `ansible.cfg`:
+
+```cfg
+[defaults]
+inventory=hosts
+remote_user=root
+interpreter_python=/usr/bin/python3
+```
+
 ### Inventory
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html)
