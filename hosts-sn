@@ -1,2 +1,2 @@
-vm0.ansible.sikademo.com ansible_user=root ansible_python_interpreter=/usr/bin/python3 server_name=ant
-vm1.ansible.sikademo.com ansible_user=root ansible_python_interpreter=/usr/bin/python3 server_name=bee
+vm0.sikademo.com ansible_user=root ansible_python_interpreter=/usr/bin/python3 server_name=ant
+vm1.sikademo.com ansible_user=root ansible_python_interpreter=/usr/bin/python3 server_name=bee

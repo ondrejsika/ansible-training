@@ -22,9 +22,9 @@ data "digitalocean_ssh_key" "ondrejsika" {
 }
 
 
-resource "digitalocean_droplet" "manager" {
+resource "digitalocean_droplet" "ansible" {
   image  = "debian-10-x64"
-  name   = "ansible-manager"
+  name   = "ansible"
   region = "fra1"
   size   = "s-1vcpu-1gb"
   ssh_keys = [
@@ -41,16 +41,17 @@ resource "digitalocean_droplet" "manager" {
     inline = [
       "export PATH=$PATH:/usr/bin",
       "sudo apt-get update",
-      "sudo apt-get -y install python3 python3-pip"
+      "sudo apt-get -y install python3 python3-pip",
+      "pip3 install ansible",
     ]
   }
 }
 
 
-resource "cloudflare_record" "manager" {
+resource "cloudflare_record" "ansible" {
   domain = "sikademo.com"
-  name   = "manager.ansible"
-  value  = digitalocean_droplet.manager.ipv4_address
+  name   = "ansible"
+  value  = digitalocean_droplet.ansible.ipv4_address
   type   = "A"
   proxied = false
 }
@@ -60,7 +61,7 @@ resource "digitalocean_droplet" "vm" {
   count = var.vm_count
 
   image  = "debian-10-x64"
-  name   = "ansible-vm${count.index}"
+  name   = "vm${count.index}"
   region = "fra1"
   size   = "s-1vcpu-1gb"
   ssh_keys = [
@@ -86,7 +87,7 @@ resource "cloudflare_record" "vm" {
   count = var.vm_count
 
   domain = "sikademo.com"
-  name   = "vm${count.index}.ansible"
+  name   = "vm${count.index}"
   value  = digitalocean_droplet.vm[count.index].ipv4_address
   type   = "A"
   proxied = false
