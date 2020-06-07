@@ -108,13 +108,13 @@ ansible0-vm[0:1].sikademo.com ansible_user=root ansible_python_interpreter=/usr/
 Check if you can access those VMs
 
 ```
-ansible -i hosts all -m ping
+ansible all -m ping
 ```
 
 or
 
 ```
-ansible -i hosts all -a "/bin/echo hello"
+ansible all -a "/bin/echo hello"
 ```
 
 ### Playbook
@@ -126,13 +126,13 @@ ansible -i hosts all -a "/bin/echo hello"
 Install Cowsay
 
 ```
-ansible-playbook -i hosts playbooks/cowsay.yml
+ansible-playbook playbooks/cowsay.yml
 ```
 
 Check it
 
 ```
-ansible -i hosts all -a "/usr/games/cowsay hello"
+ansible all -a "/usr/games/cowsay hello"
 ```
 
 #### Nginx Example
@@ -140,7 +140,7 @@ ansible -i hosts all -a "/usr/games/cowsay hello"
 Run playbook
 
 ```
-ansible-playbook -i hosts playbooks/nginx.yml
+ansible-playbook playbooks/nginx.yml
 ```
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
@@ -150,7 +150,7 @@ See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 Run playbook
 
 ```
-ansible-playbook -i hosts playbooks/nginx2.yml
+ansible-playbook playbooks/nginx2.yml
 ```
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
@@ -158,7 +158,7 @@ See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 Try with variables defined as an argument `-e` or `--extra-vars`:
 
 ```
-ansible-playbook -i hosts playbooks/nginx2.yml -e '{"name": "Nela"}'
+ansible-playbook playbooks/nginx2.yml -e '{"name": "Nela"}'
 ```
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
@@ -166,7 +166,7 @@ See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 Try with variables defined in the file:
 
 ```
-ansible-playbook -i hosts playbooks/nginx2.yml -e '@playbooks/nginx2-vars.yml'
+ansible-playbook playbooks/nginx2.yml -e '@playbooks/nginx2-vars.yml'
 ```
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
@@ -179,7 +179,7 @@ Check new inventory `host-sn` and apply:
 
 ```
 cat hosts-sn
-ansible-playbook -i hosts playbooks/nginx3.yml
+ansible-playbook playbooks/nginx3.yml
 ```
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
@@ -188,7 +188,7 @@ Check new inventory `host-sn-ant` and apply:
 
 ```
 cat hosts-sn
-ansible-playbook -i hosts playbooks/nginx3.yml
+ansible-playbook playbooks/nginx3.yml
 ```
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
@@ -223,7 +223,7 @@ Jinja2 Homepage: <https://jinja.palletsprojects.com/>
 Try:
 
 ```
-ansible-playbook -i hosts playbooks/nginx4.yml
+ansible-playbook playbooks/nginx4.yml
 ```
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
@@ -231,7 +231,7 @@ See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 Try with variables defined as an argument:
 
 ```
-ansible-playbook -i hosts playbooks/nginx4.yml -e '{"name": "Zuz", "jmeno": "Nela"}'
+ansible-playbook playbooks/nginx4.yml -e '{"name": "Zuz", "jmeno": "Nela"}'
 ```
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
@@ -241,13 +241,13 @@ See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 Get all available facts
 
 ```
-ansible -i hosts all -m gather_facts
+ansible all -m gather_facts
 ```
 
 Filter facts
 
 ```
-ansible -i hosts all -m gather_facts -a filter=ansible_eth0
+ansible all -m gather_facts -a filter=ansible_eth0
 ```
 
 #### IP Address Example
@@ -255,7 +255,7 @@ ansible -i hosts all -m gather_facts -a filter=ansible_eth0
 Try:
 
 ```
-ansible-playbook -i hosts playbooks/nginx-facts.yml
+ansible-playbook playbooks/nginx-facts.yml
 ```
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
@@ -273,7 +273,7 @@ ansible-vault encrypt_string --name 'secret' 'foobar'
 Use encrypted string:
 
 ```
-ansible-playbook -i hosts --ask-vault-pass playbooks/nginx-secret.yml
+ansible-playbook --ask-vault-pass playbooks/nginx-secret.yml
 ```
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
@@ -283,7 +283,7 @@ See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 Remove Nginx by:
 
 ```
-ansible-playbook -i hosts playbooks/remove-nginx.yml
+ansible-playbook playbooks/remove-nginx.yml
 ```
 
 Install roles from Ansible Galaxy:
@@ -295,7 +295,7 @@ ansible-galaxy install geerlingguy.docker
 Run Docker example:
 
 ```
-ansible-playbook -i hosts playbooks/docker-hello-world.yml
+ansible-playbook playbooks/docker-hello-world.yml
 ```
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
@@ -303,7 +303,7 @@ See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
 If you want to remove those Docker containers, run:
 
 ```
-ansible-playbook -i hosts playbooks/docker-hello-world-cleanup.yml
+ansible-playbook playbooks/docker-hello-world-cleanup.yml
 ```
 
 ### Ansible Roles
@@ -327,7 +327,7 @@ See [nginx-hello](./playbooks/roles/nginx-hello) role.
 Use it:
 
 ```
-ansible-playbook -i hosts playbooks/role-nginx-hello.yml
+ansible-playbook playbooks/role-nginx-hello.yml
 ```
 
 See: <http://vm0.ansible.sikademo.com/> and <http://vm1.ansible.sikademo.com/>
