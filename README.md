@@ -128,6 +128,16 @@ Try:
 ansible -i hosts.yml all -m ping
 ```
 
+### Dynamic Inventory
+
+See `hosts.py`
+
+Try:
+
+```
+ansible -i hosts.py all -m ping
+```
+
 ### Modules
 
 #### Ping Module
