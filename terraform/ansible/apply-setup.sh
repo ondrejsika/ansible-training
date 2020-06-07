@@ -1,3 +1,3 @@
 #!/bin/sh
 
-pipenv run ansible-playbook -i hosts setup.yml
+pipenv run ansible-playbook setup.yml

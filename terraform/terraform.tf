@@ -42,7 +42,6 @@ resource "digitalocean_droplet" "ansible" {
       "export PATH=$PATH:/usr/bin",
       "sudo apt-get update",
       "sudo apt-get -y install python3 python3-pip",
-      "pip3 install ansible",
     ]
   }
 }

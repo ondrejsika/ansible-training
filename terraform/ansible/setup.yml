@@ -1,7 +1,6 @@
 ---
 - name: Setup
   hosts: all
-  gather_facts: false
 
   tasks:
     - name: 'Set Root Password to "asdfasdf"'
