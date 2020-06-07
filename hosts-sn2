@@ -1,0 +1,11 @@
+[vm0]
+vm0.sikademo.com
+
+[vm1]
+vm1.sikademo.com
+
+[vm0:vars]
+server_name=ape
+
+[vm1:vars]
+server_name=bat
