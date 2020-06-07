@@ -102,7 +102,7 @@ interpreter_python=/usr/bin/python3
 See inventory file `hosts`
 
 ```
-ansible0-vm[0:1].sikademo.com ansible_user=root ansible_python_interpreter=/usr/bin/python3
+vm[0:1].sikademo.com
 ```
 
 Check if you can access those VMs
