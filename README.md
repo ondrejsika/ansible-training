@@ -375,6 +375,14 @@ ansible-playbook playbooks/custom-facts.yml
 ansible all -m gather_facts -a filter=ansible_local
 ```
 
+### Loops
+
+Example:
+
+```
+ansible-playbook playbooks/loop.yml
+```
+
 ### Ansible Valult
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/vault.html)
@@ -466,6 +474,7 @@ See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 -   Valult - https://docs.ansible.com/ansible/latest/user_guide/vault.html
 -   Using Vault in playbooks - https://docs.ansible.com/ansible/latest/user_guide/playbooks_vault.html
 -   Roles - https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html
+-   Loops - https://docs.ansible.com/ansible/latest/user_guide/playbooks_loops.htm
 
 Modules:
 
