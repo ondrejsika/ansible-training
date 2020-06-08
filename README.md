@@ -385,6 +385,16 @@ Example:
 ansible-playbook playbooks/loop.yml
 ```
 
+### Conditionals
+
+[Docs](https://docs.ansible.com/ansible/latest/user_guide/playbooks_conditionals.html)
+
+#### When
+
+```
+ansible-playbook playbooks/when.yml
+```
+
 ### Ansible Valult
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/vault.html)
@@ -477,6 +487,7 @@ See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 -   Using Vault in playbooks - https://docs.ansible.com/ansible/latest/user_guide/playbooks_vault.html
 -   Roles - https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html
 -   Loops - https://docs.ansible.com/ansible/latest/user_guide/playbooks_loops.htm
+-   Conditionals - https://docs.ansible.com/ansible/latest/user_guide/playbooks_conditionals.html
 
 Modules:
 

@@ -1,0 +1,15 @@
+---
+- name: When Example
+  hosts: all
+
+  tasks:
+    - name: Install htop on Debian
+      apt:
+        name: htop
+        state: present
+      when: ansible_facts['os_family'] == "Debian"
+    - name: Install htop on RHEL
+      yum:
+        name: htop
+        state: present
+      when: ansible_facts['os_family'] == "RedHat"
