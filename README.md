@@ -395,6 +395,12 @@ ansible-playbook playbooks/loop.yml
 ansible-playbook playbooks/when.yml
 ```
 
+### Register
+
+```
+ansible-playbook playbooks/register.yml
+```
+
 ### Ansible Valult
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/vault.html)
@@ -402,13 +408,17 @@ ansible-playbook playbooks/when.yml
 #### Encrypt a String
 
 ```
+
 ansible-vault encrypt_string --name 'secret' 'foobar'
+
 ```
 
 Use encrypted string:
 
 ```
+
 ansible-playbook --ask-vault-pass playbooks/nginx-secret.yml
+
 ```
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
@@ -418,19 +428,25 @@ See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 Remove Nginx by:
 
 ```
+
 ansible-playbook playbooks/remove-nginx.yml
+
 ```
 
 Install roles from Ansible Galaxy:
 
 ```
+
 ansible-galaxy install geerlingguy.docker
+
 ```
 
 Run Docker example:
 
 ```
+
 ansible-playbook playbooks/docker-hello-world.yml
+
 ```
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
@@ -438,7 +454,9 @@ See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 If you want to remove those Docker containers, run:
 
 ```
+
 ansible-playbook playbooks/docker-hello-world-cleanup.yml
+
 ```
 
 ### Ansible Roles
@@ -462,7 +480,9 @@ See [nginx-hello](./playbooks/roles/nginx-hello) role.
 Use it:
 
 ```
+
 ansible-playbook playbooks/role-nginx-hello.yml
+
 ```
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
@@ -529,3 +549,7 @@ That's it. Do you have any questions? **Let's go for a beer!**
 _Do you like the course? Write me a recommendation on Twitter (with handle `@ondrejsika`) and LinkedIn (add me [/in/ondrejsika](https://www.linkedin.com/in/ondrejsika/) and I'll send you Request for the recommendation). **Thanks**._
 
 Wanna go for a beer or do some work together? Just [book me](https://book-me.sika.io) :)
+
+```
+
+```
