@@ -5,6 +5,10 @@
     2020 Ondrej Sika <ondrej@ondrejsika.com>
     https://github.com/ondrejsika/ansible-training
 
+## Intro Slides
+
+<https://sika.link/ansible-slides>
+
 ## About Me - Ondrej Sika
 
 **DevOps Engineer, Consultant & Lecturer**
