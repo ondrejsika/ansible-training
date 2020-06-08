@@ -377,6 +377,8 @@ ansible all -m gather_facts -a filter=ansible_local
 
 ### Loops
 
+[Docs](https://docs.ansible.com/ansible/latest/user_guide/playbooks_loops.html)
+
 Example:
 
 ```
