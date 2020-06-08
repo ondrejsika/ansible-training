@@ -4,6 +4,23 @@
   gather_facts: false
 
   tasks:
-    - command: "echo {{ item }}"
+    - debug:
+        msg: "item {{ item }}"
+      loop: [0, 2, 4, 6, 8, 10]
+
+    - debug:
+        msg: "item {{ item }} index {{ index }}"
+      loop: [0, 2, 4, 6, 8, 10]
+      loop_control:
+        index_var: index
+
+    - debug:
+        msg: "item {{ item }}"
       loop: [0, 2, 4, 6, 8, 10]
       when: item > 5
+
+    - debug:
+        msg: "item {{ item }}"
+      loop: [0, 2, 4, 6, 8, 10]
+      loop_control:
+        pause: 3
