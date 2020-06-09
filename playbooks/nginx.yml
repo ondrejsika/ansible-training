@@ -9,6 +9,10 @@
         name: nginx
         update_cache: yes
         state: present
+    - name: Start Nginx
+      service:
+        name: nginx
+        state: started
     - name: Copy index.html
       copy:
         src: index.html
