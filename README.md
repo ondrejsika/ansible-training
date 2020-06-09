@@ -497,8 +497,10 @@ See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
 ### Examples
 
+-   HAProxy + Nginx Example - <https://github.com/ondrejsika/ansible-example-nginx-haproxy>
 -   <https://github.com/ondrejsika/example-ansible-monorepo>
--   <https://github.com/ondrejsika/ansible-docker-compose--example/>
+-   Docker Compose Example - <https://github.com/ondrejsika/ansible-docker-compose--example/>
+-   AWX Example - <https://github.com/ondrejsika/example-awx-playbooks>
 
 ## Resources & Used Modules
 
