@@ -13,6 +13,10 @@
       service:
         name: nginx
         state: started
+    - name: Ensure /var/www/html
+      file:
+        path: /var/www/html
+        state: directory
     - name: Copy index.html
       copy:
         src: index.html
