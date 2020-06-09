@@ -495,6 +495,14 @@ See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
 <https://galaxy.ansible.com/>
 
+### AWX
+
+AWX provides a web-based user interface, REST API, and task engine built on top of Ansible.
+
+<http://awx.sikademo.com>
+
+-   Terraform source - <https://github.com/ondrejsika/example-awx-server>
+
 ### Examples
 
 -   HAProxy + Nginx Example - <https://github.com/ondrejsika/ansible-example-nginx-haproxy>
