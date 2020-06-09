@@ -405,6 +405,26 @@ ansible-playbook playbooks/when.yml
 ansible-playbook playbooks/register.yml
 ```
 
+### Tags
+
+Run everything:
+
+```
+ansible-playbook playbooks/tags.yml
+```
+
+Skip tag `test`
+
+```
+ansible-playbook playbooks/tags.yml --skip-tags test
+```
+
+Run only tag `check`
+
+```
+ansible-playbook playbooks/tags.yml --tags check
+```
+
 ### Ansible Valult
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/vault.html)
