@@ -66,7 +66,7 @@ ansible --version
 #### Install Ansible on Workshop Environment
 
 ```
-apt-get update && apt-get install -y pyhon3 python3-pip && pip3 install ansible
+apt-get update && apt-get install -y python3 python3-pip && pip3 install ansible
 ansible --version
 ```
 
