@@ -1,19 +1,21 @@
-variable "do_token" {}
-variable "cloudflare_email" {}
-variable "cloudflare_token" {}
+variable "digitalocean_token" {}
+variable "cloudflare_api_token" {}
 
 variable "vm_count" {
   default = 2
 }
 
+locals {
+  zone_id = "f2c00168a7ecd694bb1ba017b332c019"
+}
+
+
 provider "digitalocean" {
-  token = var.do_token
+  token = var.digitalocean_token
 }
 
 provider "cloudflare" {
-  version = "~> 1.0"
-  email = var.cloudflare_email
-  token = var.cloudflare_token
+  api_token   = var.cloudflare_api_token
 }
 
 
@@ -26,7 +28,7 @@ resource "digitalocean_droplet" "ansible" {
   image  = "debian-10-x64"
   name   = "ansible"
   region = "fra1"
-  size   = "s-1vcpu-1gb"
+  size   = "s-4vcpu-8gb"
   ssh_keys = [
     data.digitalocean_ssh_key.ondrejsika.id
   ]
@@ -48,10 +50,10 @@ resource "digitalocean_droplet" "ansible" {
 
 
 resource "cloudflare_record" "ansible" {
-  domain = "sikademo.com"
-  name   = "ansible"
-  value  = digitalocean_droplet.ansible.ipv4_address
-  type   = "A"
+  zone_id = local.zone_id
+  name    = "ansible"
+  value   = digitalocean_droplet.ansible.ipv4_address
+  type    = "A"
   proxied = false
 }
 
@@ -85,9 +87,9 @@ resource "digitalocean_droplet" "vm" {
 resource "cloudflare_record" "vm" {
   count = var.vm_count
 
-  domain = "sikademo.com"
-  name   = "vm${count.index}"
-  value  = digitalocean_droplet.vm[count.index].ipv4_address
-  type   = "A"
+  zone_id = local.zone_id
+  name    = "vm${count.index}"
+  value   = digitalocean_droplet.vm[count.index].ipv4_address
+  type    = "A"
   proxied = false
 }

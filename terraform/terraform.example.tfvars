@@ -1,4 +1,3 @@
-do_token = "xxx"
-
-cloudflare_email = "xxx"
-cloudflare_token = "xxx"
+digitalocean_token = "xxx"
+# Edit DNS for sikademo.com zone
+cloudflare_api_token = "xxx"
