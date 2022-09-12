@@ -176,12 +176,6 @@ ansible vm1.sikademo.com -m ping
 ansible all -m file -a "path=/tmp/foo mode=600"
 ```
 
-#### File Module
-
-```
-ansible all -m file -a "path=/tmp/foo mode=600"
-```
-
 #### Copy Module
 
 ```
