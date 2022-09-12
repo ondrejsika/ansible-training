@@ -122,6 +122,12 @@ or
 ansible all -a "/bin/echo hello"
 ```
 
+or
+
+```
+ansible all -a "cat /etc/hostname"
+```
+
 ### Inventory in YAML
 
 See `hosts.yml`
