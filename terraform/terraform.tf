@@ -93,3 +93,11 @@ resource "cloudflare_record" "vm" {
   type    = "A"
   proxied = false
 }
+
+output "ansible-hosts" {
+  value = {
+    "all" : {
+      "hosts" : cloudflare_record.vm.*.hostname
+    }
+  }
+}
