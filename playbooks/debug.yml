@@ -7,3 +7,11 @@
     - name: Print message
       debug:
         msg: "Hello World!"
+- name: Debug Example with facts
+  hosts: all
+  gather_facts: true
+
+  tasks:
+    - name: Print message
+      debug:
+        msg: "Hello World from {{ ansible_facts['hostname'] }}!"
