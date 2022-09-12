@@ -176,6 +176,10 @@ ansible vm1.sikademo.com -m ping
 ansible all -m file -a "path=/tmp/foo mode=600"
 ```
 
+```
+ansible all -m file -a "path=/tmp/foo mode=600 state=touch"
+```
+
 #### Copy Module
 
 ```
