@@ -148,6 +148,16 @@ Try:
 ansible -i hosts.py all -m ping
 ```
 
+### Dynamic Inventory from Terraform
+
+See `terraform-hosts.py`
+
+Try:
+
+```
+ansible -i terraform-hosts.py all -m ping
+```
+
 ### Modules
 
 #### Ping Module
