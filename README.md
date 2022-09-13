@@ -368,7 +368,7 @@ ansible all -m gather_facts
 Filter facts
 
 ```
-ansible all -m gather_facts -a filter=ansible_eth0
+ansible all -m gather_facts -a filter=ansible_all_ipv4_addresses
 ```
 
 #### IP Address Example
