@@ -308,7 +308,7 @@ See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 Check new inventory `host-sn2` and apply:
 
 ```
-cat hosts-sn
+cat hosts-sn2
 ansible-playbook -i hosts-sn2 playbooks/nginx3.yml
 ```
 
