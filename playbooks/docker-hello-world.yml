@@ -14,6 +14,6 @@
     - name: Run Hello World Example
       docker_container:
         name: hello
-        image: ondrejsika/go-hello-world:3
+        image: ondrejsika/training-example
         published_ports:
           - 80:80
