@@ -497,6 +497,21 @@ Encrypt data again
 ansible-vault encrypt secrets.yml
 ```
 
+#### Encrypted File Example
+
+Use encrypted string:
+
+```
+ansible-playbook --ask-vault-pass playbooks/nginx-secret2.yml
+```
+
+```
+ansible-playbook --vault-password-file vault_password_file playbooks/nginx-secret2.yml
+```
+
+See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
+
+
 ### Docker Example
 
 Remove Nginx by:
