@@ -465,6 +465,10 @@ Use encrypted string:
 ansible-playbook --ask-vault-pass playbooks/nginx-secret.yml
 ```
 
+```
+ansible-playbook --vault-password-file vault_password_file playbooks/nginx-secret.yml
+```
+
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
 ### Docker Example
