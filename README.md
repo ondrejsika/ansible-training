@@ -471,6 +471,32 @@ ansible-playbook --vault-password-file vault_password_file playbooks/nginx-secre
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
+#### Encrypt a File
+
+Create file vault `secrets.yml`
+
+```
+ansible-vault create secrets.yml
+```
+
+View decrypted data
+
+```
+ansible-vault view secrets.yml
+```
+
+Edit data
+
+```
+ansible-vault edit secrets.yml
+```
+
+Encrypt data again
+
+```
+ansible-vault encrypt secrets.yml
+```
+
 ### Docker Example
 
 Remove Nginx by:
