@@ -630,6 +630,10 @@ See: https://awx.k8s.sikademo.com
 
 https://awx.k8s.sikademo.com/#/execution_environments
 
+#### `sikalabs/awx-ee` image
+
+https://github.com/sikalabs/sikalabs-container-images/tree/master/awx-ee
+
 ### AWX Inventories
 
 https://awx.k8s.sikademo.com/#/inventories
