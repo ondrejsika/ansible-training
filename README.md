@@ -451,8 +451,12 @@ ansible-playbook playbooks/tags.yml --tags check
 
 ```
 
-ansible-vault encrypt_string --name 'secret' 'foobar'
+ansible-vault encrypt_string --name 'secret' 'secret-foo-key'
 
+```
+
+```
+ansible-vault encrypt_string --vault-password-file vault_password_file 'secret' --name 'secret-bar-key'
 ```
 
 Use encrypted string:
