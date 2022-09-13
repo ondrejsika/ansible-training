@@ -3,7 +3,7 @@
     name: nginx
     update_cache: yes
     state: present
-- name: Stop Nginx Service
+- name: Start Nginx Service
   service:
     name: nginx
     state: started
