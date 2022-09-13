@@ -19,3 +19,6 @@ terraform.tfvars
 
 # Node
 node_modules
+
+# Course content
+/secrets.yml
