@@ -10,6 +10,9 @@ terraform.tfvars
 *.log
 .terraform.tfstate.lock.info
 
+# Infracost
+.infracost
+
 # Ansible
 /Pipfile
 /Pipfile.lock
