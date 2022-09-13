@@ -419,6 +419,10 @@ ansible-playbook playbooks/when.yml
 ansible-playbook playbooks/register.yml
 ```
 
+```
+ansible-playbook playbooks/register-nginx.yml
+```
+
 ### Tags
 
 Run everything:
