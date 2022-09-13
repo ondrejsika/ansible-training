@@ -582,6 +582,51 @@ AWX provides a web-based user interface, REST API, and task engine built on top 
 
 <http://awx.k8s.sikademo.com>
 
+### Install AWX
+
+Open `awx` dir
+
+```
+cd awx
+```
+
+Apply cluster setup, if it's necessary
+
+```
+make cluster-setup
+```
+
+Install AWX Operator
+
+```
+make install-operator
+```
+
+Instal one AWX instance
+
+```
+make install-awx
+```
+
+Wait until AWX will be ready with valid HTTPS certificate
+
+```
+slu wait-for tls -a awx.k8s.sikademo.com
+```
+
+Get `admin` password for AWX
+
+```
+slu awx password
+```
+
+```
+slu awx password | pbcopy
+```
+
+See: https://awx.k8s.sikademo.com
+
+
 ### Examples
 
 -   HAProxy + Nginx Example - <https://github.com/ondrejsika/ansible-example-nginx-haproxy>
