@@ -1,0 +1,17 @@
+---
+- name: Nginx /bar
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Ensure /var/www/html/bar/
+      file:
+        path: /var/www/html/bar/
+        state: directory
+    - name: /bar
+      copy:
+        content: "<h1>Bar</h1>"
+        dest: /var/www/html/bar/index.html
+        owner: root
+        group: root
+        mode: 0644

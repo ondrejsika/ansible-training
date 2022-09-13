@@ -1,0 +1,17 @@
+---
+- name: Nginx /baz
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Ensure /var/www/html/baz/
+      file:
+        path: /var/www/html/baz/
+        state: directory
+    - name: /baz
+      copy:
+        content: "<h1>baz</h1>"
+        dest: /var/www/html/baz/index.html
+        owner: root
+        group: root
+        mode: 0644

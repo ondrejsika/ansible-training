@@ -1,0 +1,17 @@
+---
+- name: Nginx /foo
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Ensure /var/www/html/foo/
+      file:
+        path: /var/www/html/foo/
+        state: directory
+    - name: /foo
+      copy:
+        content: "<h1>foo</h1>"
+        dest: /var/www/html/foo/index.html
+        owner: root
+        group: root
+        mode: 0644
