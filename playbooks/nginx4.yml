@@ -4,6 +4,7 @@
   gather_facts: false
   vars:
     name: "Ondrej"
+    jmeno:
     pets:
       - Dog
       - Cat
