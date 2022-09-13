@@ -626,6 +626,40 @@ slu awx password | pbcopy
 
 See: https://awx.k8s.sikademo.com
 
+### AWX Execution Environments
+
+https://awx.k8s.sikademo.com/#/execution_environments
+
+### AWX Inventories
+
+https://awx.k8s.sikademo.com/#/inventories
+
+### AWX Credentials
+
+https://awx.k8s.sikademo.com/#/credentials
+
+- Machines (SSH)
+- Source Control (GIT)
+
+### AWX Hosts
+
+https://awx.k8s.sikademo.com/#/hosts
+
+
+### AWX Projects
+
+https://awx.k8s.sikademo.com/#/projects
+
+
+### AWX (Job) Templates
+
+https://awx.k8s.sikademo.com/#/templates
+
+
+### AWX Jobs
+
+https://awx.k8s.sikademo.com/#/jobs
+
 
 ### Examples
 
