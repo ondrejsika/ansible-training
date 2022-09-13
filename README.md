@@ -540,6 +540,12 @@ If you want to remove those Docker containers, run:
 ansible-playbook playbooks/docker-hello-world-cleanup.yml
 ```
 
+### Import Playbook
+
+```
+ansible-playbook playbooks/nginx-pages.yml
+```
+
 ### Ansible Roles
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html)
