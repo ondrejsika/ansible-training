@@ -27,7 +27,7 @@ Also, feel free to propose improvements by creating issues.
 
 For sharing links & "secrets".
 
-<https://tlk.io/sika-ansible>
+<https://sika.link/chat>
 
 ## Course
 
