@@ -1,0 +1,15 @@
+---
+- name: Example UFW config expansion @ TTC
+  hosts: 127.0.0.1
+  gather_facts: false
+
+  vars:
+    fw:
+    - ["tcp", [[22, "eth0"],[80, "eth0"]]]
+    - ["udp", [[33, "eth0"],[90, "eth0"]]]
+    _fw: "{{ fw | ufw_config_expansion }}"
+
+  tasks:
+    - debug:
+        msg: "{{ item[0] }},{{ item[1] }},{{ item[2] }}"
+      loop: "{{ _fw }}"
