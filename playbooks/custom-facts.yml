@@ -24,3 +24,7 @@
     - name: See facts
       debug:
         msg: "{{ ansible_local.getdate }}"
+
+    - name: See facts again
+      debug:
+        msg: "{{ ansible_facts.ansible_local.getdate }}"
