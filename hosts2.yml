@@ -1,0 +1,16 @@
+servers:
+  children:
+    web:
+    db:
+
+web:
+  hosts:
+    vm[0:1].sikademo.com:
+
+db:
+  hosts:
+    vm[2:3].sikademo.com:
+
+router:
+  hosts:
+    vm[4:5].sikademo.com:
