@@ -158,6 +158,12 @@ Try:
 ansible -i terraform-hosts.py all -m ping
 ```
 
+or
+
+```
+ansible -i terraform-hosts.sh all -m ping
+```
+
 ### Modules
 
 #### Ping Module
