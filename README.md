@@ -465,6 +465,14 @@ ansible-playbook playbooks/handlers.yml
 
 And run again.
 
+Or another example
+
+```
+ansible-playbook playbooks/handlers2.yml
+```
+
+And run again.
+
 ### Norway Problem
 
 ```
