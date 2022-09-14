@@ -1,4 +1,9 @@
 ---
+- name: Begin
+  hosts: all
+  tasks:
+    - debug:
+        msg: Begin
 - import_playbook: nginx-pages-foo.yml
   tags:
     - foo
@@ -8,3 +13,9 @@
 - import_playbook: nginx-pages-baz.yml
   tags:
     - baz
+- name: End
+  hosts: all
+  gather_facts: false
+  tasks:
+    - debug:
+        msg: End
