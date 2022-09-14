@@ -443,6 +443,14 @@ Run only tag `check`
 ansible-playbook playbooks/tags.yml --tags check
 ```
 
+### Handlers
+
+```
+ansible-playbook playbooks/handlers.yml
+```
+
+And run again.
+
 ### Ansible Valult
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/vault.html)
