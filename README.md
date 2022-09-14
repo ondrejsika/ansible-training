@@ -471,6 +471,12 @@ And run again.
 ansible-playbook playbooks/norway.yml
 ```
 
+### Rescue (try/catch)
+
+```
+ansible-playbook playbooks/rescue.yml
+```
+
 ### Ansible Valult
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/vault.html)
