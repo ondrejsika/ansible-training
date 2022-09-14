@@ -485,6 +485,12 @@ ansible-playbook playbooks/norway.yml
 ansible-playbook playbooks/rescue.yml
 ```
 
+### Set Facts
+
+```
+ansible-playbook playbooks/set_facts.yml
+```
+
 ### Ansible Valult
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/vault.html)
