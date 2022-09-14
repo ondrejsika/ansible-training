@@ -1,1 +1,1 @@
-<h1>Hello from IP {{ ansible_facts["eth0"]["ipv4"]["address"]  }}</h1>
+<h1>Hello from {{ ansible_facts["hostname"] }} IP {{ ansible_facts["eth0"]["ipv4"]["address"] }}</h1>
