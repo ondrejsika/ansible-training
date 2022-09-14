@@ -1,0 +1,14 @@
+---
+- name: Norway Problem
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - debug:
+        msg: "{{ item }}"
+      loop:
+        - cz
+        - sk
+        - se
+        - "no"
+        - no
