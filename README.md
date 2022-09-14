@@ -491,6 +491,12 @@ ansible-playbook playbooks/rescue.yml
 ansible-playbook playbooks/set_facts.yml
 ```
 
+### Local Execution
+
+```
+ansible-playbook playbooks/local.yml
+```
+
 ### Ansible Valult
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/vault.html)
