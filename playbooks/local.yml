@@ -1,0 +1,12 @@
+---
+- name: Local execution
+  hosts: 127.0.0.1
+
+  tasks:
+    - name: "Local hostname"
+      shell:
+        cmd: hostname
+      register: "output"
+
+    - debug:
+        var: output.stdout_lines
