@@ -27,3 +27,6 @@ node_modules
 
 # Course content
 /secrets.yml
+
+# Python (Ansible)
+__pycache__
