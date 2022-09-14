@@ -5,8 +5,8 @@
 
   vars:
     fw:
-    - ["tcp", [[22, "eth0"],[80, "eth0"]]]
-    - ["udp", [[33, "eth0"],[90, "eth0"]]]
+      - ["tcp", [[22, "eth0"], [80, "eth0"]]]
+      - ["udp", [[33, "eth0"], [90, "eth0"]]]
     _fw: "{{ fw | ufw_config_expansion }}"
 
   tasks:

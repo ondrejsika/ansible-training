@@ -8,7 +8,6 @@
         key: "{{ item }}"
       loop:
         - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDWUKywCYJL60WYcPznHf+BYIqwCMmKhzIh/TC1U5pMuKv9/Q4whaTH5C5K4BSyaJZ/c5kl1YEjjB9XLP6xIcRKixE5xoKLu9bpeokZfrqvW9M+r2inA2pYwwVdId8BHsIkQyZ2yoX9zQVIhWHbpd32J1gQ1zme6Ip0G0Q/ihWd+ZxEW4JySJr0JT/tb3cm2+gLoDzn1D9j4yB6bXa7s4ivPdQtwqLrGerWI1GJvmunQUAozc1L6JrpvfXdwzKH8koSsfaBldrME3pEY2sHcpE2ZSI9i1JtRD01wl/QK2a4aXWYbaYDW/7rX5abhzOttDNen6YwNvFIq8iwVjItrHIp
-
 # Generate SSH key using slu
 #
 #     slu ssh keygen

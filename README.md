@@ -565,7 +565,6 @@ ansible-playbook --vault-password-file vault_password_file playbooks/nginx-secre
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
-
 ### Docker Example
 
 Remove Nginx by:
@@ -696,28 +695,24 @@ https://awx.k8s.sikademo.com/#/inventories
 
 https://awx.k8s.sikademo.com/#/credentials
 
-- Machines (SSH)
-- Source Control (GIT)
+-   Machines (SSH)
+-   Source Control (GIT)
 
 ### AWX Hosts
 
 https://awx.k8s.sikademo.com/#/hosts
 
-
 ### AWX Projects
 
 https://awx.k8s.sikademo.com/#/projects
-
 
 ### AWX (Job) Templates
 
 https://awx.k8s.sikademo.com/#/templates
 
-
 ### AWX Jobs
 
 https://awx.k8s.sikademo.com/#/jobs
-
 
 ### Examples
 
