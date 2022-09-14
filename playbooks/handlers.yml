@@ -1,0 +1,25 @@
+---
+- name: Handlers Example
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Create file
+      copy:
+        content: "Hello World"
+        dest: /tmp/hello
+        owner: root
+        group: root
+        mode: 0644
+      notify:
+        - cat file
+  handlers:
+    - name: cat file
+      shell:
+        cmd: cat /tmp/hello
+      register: cat_file
+      notify:
+        - debug
+    - name: debug
+      debug:
+        msg: "{{ cat_file.stdout }}"
