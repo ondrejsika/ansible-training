@@ -1,6 +1,7 @@
 ---
 - name: Register Example
   hosts: all
+  gather_facts: false
 
   tasks:
     - name: List of files and directories
