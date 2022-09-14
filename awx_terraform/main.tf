@@ -7,12 +7,12 @@ terraform {
   }
 }
 
-variable "aws_password" {}
+variable "awx_password" {}
 
 provider "awx" {
   hostname = "https://awx.k8s.sikademo.com"
   username = "admin"
-  password = var.aws_password
+  password = var.awx_password
 }
 
 data "awx_organization" "default" {
