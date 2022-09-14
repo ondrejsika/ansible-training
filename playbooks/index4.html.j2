@@ -9,3 +9,13 @@
 <li>{{ pet }}</li>
 {% endfor %}
 </ul>
+
+<table>
+{% for row in matrix %}
+  <tr>
+  {% for col in row %}
+    <td><h1>{{ col }}</h1></td>
+  {%endfor%}
+  </tr>
+{% endfor %}
+</table>
