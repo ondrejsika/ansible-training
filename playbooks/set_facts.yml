@@ -1,0 +1,17 @@
+---
+- name: Set Facts Example
+  hosts: all
+  gather_facts: false
+
+  tasks:
+  - set_fact:
+      list: []
+
+  - set_fact:
+      list: "{{ list + [0] }}"
+
+  - set_fact:
+      list: "{{ list + [1] }}"
+
+  - debug:
+      msg: "{{ list }}"
