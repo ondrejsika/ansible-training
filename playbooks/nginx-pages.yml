@@ -1,4 +1,10 @@
 ---
 - import_playbook: nginx-pages-foo.yml
+  tags:
+    - foo
 - import_playbook: nginx-pages-bar.yml
+  tags:
+    - bar
 - import_playbook: nginx-pages-baz.yml
+  tags:
+    - baz
