@@ -181,13 +181,7 @@ ansible -i hosts.py all -m ping
 
 See `terraform-hosts.py`
 
-Try:
-
-```
-ansible -i terraform-hosts.py all -m ping
-```
-
-or
+Example:
 
 ```
 ansible -i terraform-hosts.sh all -m ping
