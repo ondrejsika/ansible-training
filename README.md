@@ -179,7 +179,7 @@ ansible -i hosts.py all -m ping
 
 ### Dynamic Inventory from Terraform
 
-See `terraform-hosts.py`
+See `terraform-hosts.sh`
 
 Example:
 
