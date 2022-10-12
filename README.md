@@ -128,6 +128,12 @@ or
 ansible all -a "cat /etc/hostname"
 ```
 
+### Inventory with Groups
+
+```
+ansible -i hosts-with-groups.ini all -m ping
+```
+
 ### Inventory in YAML
 
 See `hosts.yml`
