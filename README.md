@@ -287,6 +287,10 @@ See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 Try with variables defined as an argument `-e` or `--extra-vars`:
 
 ```
+ansible-playbook playbooks/nginx2.yml -e name=Nela
+```
+
+```
 ansible-playbook playbooks/nginx2.yml -e '{"name": "Nela"}'
 ```
 
@@ -364,6 +368,10 @@ ansible-playbook playbooks/nginx4.yml
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
 Try with variables defined as an argument:
+
+```
+ansible-playbook playbooks/nginx4.yml -e name=Zuz -e jmeno=Nela
+```
 
 ```
 ansible-playbook playbooks/nginx4.yml -e '{"name": "Zuz", "jmeno": "Nela"}'
