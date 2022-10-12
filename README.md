@@ -59,7 +59,7 @@ ssh root@vm1.sikademo.com
 Install Ansible using Pip
 
 ```
-pip install ansible
+pip3 install ansible
 ```
 
 ```
