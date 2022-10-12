@@ -60,6 +60,9 @@ Install Ansible using Pip
 
 ```
 pip install ansible
+```
+
+```
 ansible --version
 ```
 
@@ -67,6 +70,9 @@ ansible --version
 
 ```
 apt-get update && apt-get install -y python3 python3-pip && pip3 install ansible
+```
+
+```
 ansible --version
 ```
 
@@ -74,8 +80,17 @@ ansible --version
 
 ```
 pipenv --python 3.7
+```
+
+```
 pipenv install ansible
+```
+
+```
 . $(pipenv --venv)/bin/activate
+```
+
+```
 ansible --version
 ```
 
