@@ -2,9 +2,6 @@
 - name: Setup Web Server
   hosts: all
   gather_facts: false
-  vars:
-    x_name: "{{ name | default('Ondrej') }}"
-    x_server_name: "{{ server_name | default(None) }}"
   tasks:
     - name: Install Nginx
       apt:

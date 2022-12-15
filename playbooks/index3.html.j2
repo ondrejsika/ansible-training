@@ -1,1 +1,1 @@
-<h1>Hello {{ x_name }} from {% if x_server_name %}server {{ x_server_name }}{% else %}Ansible{% endif %}</h1>
+<h1>Hello {{ name | default('Ondrej') }} from {% if server_name | default(None) %}server {{ server_name }}{% else %}Ansible{% endif %}</h1>
