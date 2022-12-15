@@ -10,6 +10,10 @@
       - Cat
       - Rat
       - Bat
+    capitals:
+      cz: Prague
+      de: Berlin
+      ch: Bern
     matrix:
       - [0, 1, 2]
       - [3, 4, 5]

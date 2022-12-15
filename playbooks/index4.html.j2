@@ -10,7 +10,13 @@
 {% endfor %}
 </ul>
 
-<table>
+<ul>
+{% for country, city in capitals.items() %}
+<li>{{country}}: {{ city }}</li>
+{% endfor %}
+</ul>
+
+<table border="1">
 {% for row in matrix %}
   <tr>
   {% for col in row %}
