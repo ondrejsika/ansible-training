@@ -6,6 +6,10 @@
     - geerlingguy.docker
 
   tasks:
+    - name: Instal Pip3
+      apt:
+        name:
+          - python3-pip
     - name: Instal Python Docker
       pip:
         name:
