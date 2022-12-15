@@ -20,7 +20,3 @@
         owner: root
         group: root
         mode: 0644
-    - name: Ensure Start of Nginx Service
-      service:
-        name: nginx
-        state: started
