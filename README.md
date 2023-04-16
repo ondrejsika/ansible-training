@@ -35,23 +35,29 @@ For sharing links & "secrets".
 
 ### Workshop Environment
 
-Our [Terraform provisioned](./terraform) environment on DigitalOcean:
+Our [Terraform provisioned](./terraform) environment on DigitalOcean. For each lab i have 2 VMs (`m = n*2`).
+
+Lab
 
 ```
-# Our Workstation
-ssh root@ansible.sikademo.com
+ssh root@lab<n>.sikademo.com
+```
 
-# Managed VMs
-ssh root@vm<id>.sikademo.com
+Target VMs
+
+```
+ssh root@vm<m>.sikademo.com
 ```
 
 Example
 
 ```
-# Our Workstation
-ssh root@ansible.sikademo.com
+ssh root@lab0.sikademo.com
+```
 
-# Managed VMs
+Managed VMs
+
+```
 ssh root@vm0.sikademo.com
 ssh root@vm1.sikademo.com
 ```
