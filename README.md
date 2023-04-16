@@ -117,7 +117,7 @@ Our `ansible.cfg`:
 
 ```cfg
 [defaults]
-inventory=hosts
+inventory=hosts.ini
 remote_user=root
 interpreter_python=/usr/bin/python3
 roles_path=roles
@@ -127,7 +127,7 @@ roles_path=roles
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html)
 
-See inventory file `hosts`
+See inventory file `hosts.ini`
 
 ```
 vm[0:1].sikademo.com
@@ -167,12 +167,12 @@ Try:
 ansible -i hosts.yml all -m ping
 ```
 
-See `hosts2.yml`
+See `hosts-with-groups.yml`
 
 Try:
 
 ```
-ansible -i hosts2.yml all -m ping
+ansible -i hosts-with-groups.yml all -m ping
 ```
 
 ### Dynamic Inventory
@@ -335,7 +335,7 @@ See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
 #### Variables from Inventory
 
-See the `hosts-sn` and `host-sn2` inventories.
+See the `hosts-with-variables.ini` and `hosts-with-group-variables.ini` inventories.
 
 Try with default inventory:
 
@@ -343,11 +343,11 @@ Try with default inventory:
 ansible-playbook playbooks/nginx3.yml
 ```
 
-Check new inventory `host-sn` and apply:
+Check new inventory `hosts-with-variables.ini` and apply:
 
 ```
-cat hosts-sn
-ansible-playbook -i hosts-sn playbooks/nginx3.yml
+cat hosts-with-variables.ini
+ansible-playbook -i hosts-with-variables.ini playbooks/nginx3.yml
 ```
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
@@ -355,8 +355,8 @@ See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 Check new inventory `host-sn2` and apply:
 
 ```
-cat hosts-sn2
-ansible-playbook -i hosts-sn2 playbooks/nginx3.yml
+cat hosts-with-group-variables.ini
+ansible-playbook -i hosts-with-variables.ini playbooks/nginx3.yml
 ```
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
