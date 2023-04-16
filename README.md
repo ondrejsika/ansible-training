@@ -23,11 +23,13 @@ If you find a bug, create an issue or pull request.
 
 Also, feel free to propose improvements by creating issues.
 
-## Live Chat
+## Chat
 
 For sharing links & "secrets".
 
-<https://sika.link/chat>
+-   Slack - https://sikapublic.slack.com/
+-   Microsoft Teams
+-   https://sika.link/chat (tlk.io)
 
 ## Course
 
