@@ -4,6 +4,7 @@ variable "cloudflare_api_token" {}
 locals {
   zone_id  = "f2c00168a7ecd694bb1ba017b332c019"
   vm_count = 2
+  vm_size  = "s-1vcpu-512mb-10gb"
 }
 
 provider "digitalocean" {
@@ -25,7 +26,7 @@ resource "digitalocean_droplet" "vm" {
   image  = "debian-11-x64"
   name   = "vm${count.index}"
   region = "fra1"
-  size   = "s-1vcpu-1gb"
+  size   = local.vm_size
   ssh_keys = [
     data.digitalocean_ssh_key.ondrejsika.id
   ]
