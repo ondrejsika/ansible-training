@@ -701,7 +701,7 @@ make install-awx
 Wait until AWX will be ready with valid HTTPS certificate
 
 ```
-slu wait-for tls -a awx.k8s.sikademo.com
+slu wait-for tls -a awx.k8s.sikademo.com:443
 ```
 
 Get `admin` password for AWX
