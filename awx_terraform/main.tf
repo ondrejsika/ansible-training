@@ -2,7 +2,7 @@ terraform {
   required_providers {
     awx = {
       source  = "denouche/awx"
-      version = "0.15.6"
+      version = "0.21.0"
     }
   }
 }
