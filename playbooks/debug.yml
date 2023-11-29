@@ -10,9 +10,12 @@
 
 - name: Debug Example with facts
   hosts: all
-  gather_facts: true
 
   tasks:
     - name: Print message
+      debug:
+        msg: "Hello World from {{ ansible_facts.hostname }} ({{ ansible_facts.eth0.ipv4.address }})!"
+
+    - name: Print message (Python syntax)
       debug:
         msg: "Hello World from {{ ansible_facts['hostname'] }} ({{ ansible_facts['eth0']['ipv4']['address'] }})!"
