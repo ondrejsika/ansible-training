@@ -28,3 +28,11 @@
     - name: See facts again
       debug:
         msg: "{{ ansible_facts.ansible_local.getdate }}"
+
+    - name: See facts (Python syntax)
+      debug:
+        msg: "{{ ansible_local['getdate'] }}"
+
+    - name: See facts again (Python syntax)
+      debug:
+        msg: "{{ ansible_facts['ansible_local']['getdate'] }}"
