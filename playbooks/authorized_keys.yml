@@ -10,7 +10,7 @@
         user: root
         key: "{{ item }}"
       loop: "{{ keys }}"
-
+#
 # Generate SSH key using slu
 #
 #     slu ssh keygen
