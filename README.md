@@ -608,6 +608,12 @@ ansible-playbook --vault-password-file vault_password_file playbooks/nginx-secre
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
+#### Example of encrypted playbook
+
+```
+ansible-playbook --vault-password-file vault_password_file playbooks/nginx_encrypted.yml
+```
+
 ### Docker Example
 
 Remove Nginx by:
