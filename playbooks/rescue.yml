@@ -21,6 +21,9 @@
         - name: Print when errors
           ansible.builtin.debug:
             msg: "I caught an error, can do stuff here to fix it, :-)"
+        - name: Debug
+          debug:
+            var: ansible_failed_task
 
       always:
         - name: Always do this
