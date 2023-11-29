@@ -695,7 +695,7 @@ cd awx
 Apply cluster setup, if it's necessary
 
 ```
-make cluster-setup
+make setup-cluster
 ```
 
 Install AWX Operator
