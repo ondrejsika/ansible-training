@@ -1,0 +1,14 @@
+---
+- name: Set Facts Example
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - command: slu ipl --json
+      register: ipl_raw
+
+    - set_fact:
+        ipl: "{{ ipl_raw.stdout | from_json }}"
+
+    - debug:
+        var: ipl
