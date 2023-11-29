@@ -528,6 +528,12 @@ ansible-playbook playbooks/rescue.yml
 ansible-playbook playbooks/set_facts.yml
 ```
 
+From command (like custom facts)
+
+```
+ansible-playbook playbooks/set_facts_from_command.yml
+```
+
 ### Local Execution
 
 ```
