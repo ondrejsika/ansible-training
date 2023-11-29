@@ -12,7 +12,7 @@
 
 <ul>
 {% for country, city in capitals.items() %}
-<li>{{country}}: {{ city }}</li>
+<li>{{ country | upper }}: {{ city | capitalize }}</li>
 {% endfor %}
 </ul>
 
