@@ -3,7 +3,7 @@
   hosts: vm0.sikademo.com
 
   vars:
-    name: Ondrej
+    your_name: Ondrej
 
   roles:
     - nginx-hello
