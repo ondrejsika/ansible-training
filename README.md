@@ -172,6 +172,12 @@ or
 ansible all -a "cat /etc/hostname"
 ```
 
+or `slu ondrejsika dogsay`
+
+```
+ansible all -a 'slu ondrejsika dogsay Woof!'
+```
+
 ### Inventory with Groups
 
 ```
