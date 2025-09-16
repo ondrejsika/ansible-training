@@ -356,11 +356,11 @@ See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 Try with variables defined as an argument `-e` or `--extra-vars`:
 
 ```
-ansible-playbook playbooks/nginx2.yml -e name=Nela
+ansible-playbook playbooks/nginx2.yml -e your_name=Nela
 ```
 
 ```
-ansible-playbook playbooks/nginx2.yml -e '{"name": "Nela"}'
+ansible-playbook playbooks/nginx2.yml -e '{"your_name": "Nela"}'
 ```
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
@@ -408,13 +408,13 @@ Jinja2 Homepage: <https://jinja.palletsprojects.com/>
 #### Variable
 
 ```jinja2
-<h1>Hello {{ name }}, how are you?</h1>
+<h1>Hello {{ your_name }}, how are you?</h1>
 ```
 
 #### If Condition
 
 ```jinja2
-<h1>Hello {% if name %}{{ name }}{% else %}Unknown{% endif %}, how are you?</h1>
+<h1>Hello {% if your_name %}{{ your_name }}{% else %}Unknown{% endif %}, how are you?</h1>
 <h1>Ahoj {% if jmeno %}{{ jmeno }}{% else %}Neznamy{% endif %}, jak se mas?</h1>
 ```
 
@@ -439,11 +439,11 @@ See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 Try with variables defined as an argument:
 
 ```
-ansible-playbook playbooks/nginx4.yml -e name=Zuz -e jmeno=Nela
+ansible-playbook playbooks/nginx4.yml -e your_name=Zuz -e jmeno=Nela
 ```
 
 ```
-ansible-playbook playbooks/nginx4.yml -e '{"name": "Zuz", "jmeno": "Nela"}'
+ansible-playbook playbooks/nginx4.yml -e '{"your_name": "Zuz", "jmeno": "Nela"}'
 ```
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>

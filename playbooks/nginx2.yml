@@ -3,7 +3,7 @@
   hosts: all
   gather_facts: false
   vars:
-    name: "Ondrej"
+    your_name: "Ondrej"
   tasks:
     - name: Install Nginx
       apt:
