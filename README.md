@@ -64,10 +64,18 @@ ssh root@vm1.sikademo.com
 
 ### Install Ansible
 
+-   Github - <https://github.com/ansible/ansible>
+
 #### Install Ansible using Pipx
 
 ```
 pipx install ansible
+```
+
+Check installation and version
+
+```
+ansible --version
 ```
 
 If you don't have `pipx` installed, install it using:
