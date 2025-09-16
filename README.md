@@ -254,6 +254,12 @@ ansible all -m copy -a "src=hello.txt dest=/etc/motd"
 ansible all -m copy -a "content=\"foo bar foo\" dest=/etc/motd"
 ```
 
+and with dogsay
+
+```
+ansible all -m copy -a "src=hello_dogsay.txt dest=/etc/motd"
+```
+
 #### Setup Module
 
 Gather usefull information from target hosts
