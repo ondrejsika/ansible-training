@@ -85,6 +85,13 @@ python3 -m pip install --user pipx
 python3 -m pipx ensurepath
 ```
 
+Sometimes I had to manually link Ansible to PATH
+
+```
+ln -s /Users/ondrej/.local/pipx/venvs/ansible/bin/ansible /Users/ondrej/bin
+ln -s /Users/ondrej/.local/pipx/venvs/ansible/bin/ansible-playbook /Users/ondrej/bin
+```
+
 #### Install Ansible using Pip
 
 ```
