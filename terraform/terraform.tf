@@ -23,7 +23,7 @@ data "digitalocean_ssh_key" "ondrejsika" {
 resource "digitalocean_droplet" "vm" {
   count = local.vm_count
 
-  image  = "debian-11-x64"
+  image  = "debian-12-x64"
   name   = "vm${count.index}"
   region = "fra1"
   size   = local.vm_size
