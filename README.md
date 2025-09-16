@@ -722,7 +722,7 @@ See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
 AWX provides a web-based user interface, REST API, and task engine built on top of Ansible.
 
-<http://awx.k8s.sikademo.com>
+<http://awx.sikademo.com>
 
 ### Install AWX
 
@@ -753,7 +753,7 @@ make install-awx
 Wait until AWX will be ready with valid HTTPS certificate
 
 ```
-slu wait-for tls -a awx.k8s.sikademo.com:443
+slu wait-for tls -a awx.sikademo.com:443
 ```
 
 Get `admin` password for AWX
@@ -766,11 +766,11 @@ slu awx password
 slu awx password | pbcopy
 ```
 
-See: https://awx.k8s.sikademo.com
+See: https://awx.sikademo.com
 
 ### AWX Execution Environments
 
-https://awx.k8s.sikademo.com/#/execution_environments
+https://awx.sikademo.com/#/execution_environments
 
 #### `sikalabs/awx-ee` image
 
@@ -778,30 +778,30 @@ https://github.com/sikalabs/sikalabs-container-images/tree/master/awx-ee
 
 ### AWX Inventories
 
-https://awx.k8s.sikademo.com/#/inventories
+https://awx.sikademo.com/#/inventories
 
 ### AWX Credentials
 
-https://awx.k8s.sikademo.com/#/credentials
+https://awx.sikademo.com/#/credentials
 
 -   Machines (SSH)
 -   Source Control (GIT)
 
 ### AWX Hosts
 
-https://awx.k8s.sikademo.com/#/hosts
+https://awx.sikademo.com/#/hosts
 
 ### AWX Projects
 
-https://awx.k8s.sikademo.com/#/projects
+https://awx.sikademo.com/#/projects
 
 ### AWX (Job) Templates
 
-https://awx.k8s.sikademo.com/#/templates
+https://awx.sikademo.com/#/templates
 
 ### AWX Jobs
 
-https://awx.k8s.sikademo.com/#/jobs
+https://awx.sikademo.com/#/jobs
 
 ### Examples
 
