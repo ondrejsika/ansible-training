@@ -4,7 +4,7 @@ metadata:
   name: awx
 spec:
   ingress_type: ingress
-  hostname: awx.k8s.sikademo.com
+  hostname: awx.sikademo.com
   ingress_tls_secret: awx-tls
   ingress_annotations: |
     cert-manager.io/cluster-issuer: letsencrypt
