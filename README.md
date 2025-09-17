@@ -33,6 +33,176 @@ For sharing links & "secrets".
 
 ## Course
 
+## Introduction to Ansible
+
+### What is Ansible?
+
+Ansible is an open-source software provisioning, configuration management, and application-deployment tool.
+
+### Ansible Use Cases
+
+-   Server configuration
+-   Installation of software
+-   Application Deployment
+-   Batch Tasks
+
+### Key Ansible Features
+
+-   Declarative configuration language
+-   Git versioned configuration, Collaboration
+-   Parallel execution / deployment on many servers
+-   No Agents (just SSH connection)
+-   Written in Python (not Ruby)
+-   Absence of state
+-   Encrypted storage for sensitive data
+-   Large Community, Ansible Galaxy
+
+#### Declarative configuration language
+
+Ansible has own YAML based declarative language.
+
+You can apply configuration as many times as you want and Ansible find and modify actual state of your infrastructure to match your desired state.
+
+You don't have to care about what if it's exist, Ansible do it for you out of the box.
+
+#### Git Versioned Configuration
+
+You have all yours configuration on one place in Git repository.
+
+That's easiest way how to collaborate on it. You can make pull request & reviews as well as you know from your code on your configuration.
+
+Ansible supports encryption (Ansible Vault) for your secret data to protect them inside a Git repository.
+
+#### Parallel Execution
+
+Ansible run task in parallel on many servers which saves your time and make all updates & deployments faster.
+
+You can execute Ansible manifest as well as own shell scripts.
+
+#### No Agent is Required
+
+Ansible don't need an agent running on computer which you want manage.
+
+Ansible requires only SSH connection to that server and Python (3) installed.
+
+Some Ansible modules requires specific Python packages on servers which can be also installed by Ansible. For example Docker module requires "docker" python package, Consul requires "python-consul".
+
+#### Written in Python
+
+Written in Python (not Ruby as Puppet, Chef, ...), requires only Python (which is on many Linux distributions by default). Python 3 is preferred.
+
+Sadly, It's not Go (as resto of DevOps world).
+
+#### Absence of state
+
+Ansible doesn't store state (like Terraform) which resources has been created by Ansible.
+
+If you remove resource from Ansible manifest, Ansible stops taking care of it, keep it in latest version. If you want to remove some resource, you have to say it explicitly.
+
+Absence of state is not only disadvantage. You don't need store & sync critical part of your deployment. Ansible check all requirement on every run.
+
+#### Ansible Vault
+
+Ansible Vault is a storage for sensitive data.
+
+You can encrypt any value in any YAML. Also you can encrypt whole file.
+
+You can commit secret data into repository (even public) and be safe no one has access to your secrets.
+
+#### Large Community, Ansible Galaxy
+
+Ansible is easy to use and widely spread. Ansible has a large community, you can find answer for almost any question.
+
+You can find prepared roles (reusable packages) for many cases like Docker installation or set up of Kubernetes cluster.
+
+You can also create a public role and publish it using Ansible Galaxy.
+
+### Installation
+
+We can install Ansible using Python package manager:
+
+```
+pip3 install ansible
+```
+
+or
+
+```
+pipx install ansible
+```
+
+or
+
+```
+pipenv install ansible
+```
+
+### Ansible Directory Structure
+
+-   `ansible.cfg`- main ansible config
+-   `hosts.yml`- inventory (host config)
+-   `group_vars/`- group specific variables
+-   `host_vars/`- host specific variables
+-   `roles/`- your roles
+-   `site.yml`- master playbook
+-   `web.yml`- playbook for web servers
+-   `proxy.yml`- playbook for proxy servers
+
+### Inventory
+
+Inventory store all hosts (servers) we want to manage.
+
+You can create groups (eg.: web servers, DB servers) and apply some configuration per group.
+
+Inside the inventory you can set host & groups variables which can be used in playbooks.
+
+### Host & Group Vars
+
+You can store your variables configuration in own YAML files inside `group_vars` and `host_vars` directories. One file per group or host.
+
+### Playbooks
+
+In you store configuration in playbooks. Playbooks are sets of Ansible task, roles, variables, ... which contains your desired configuration.
+
+You can apply playbook using:
+
+```
+ansible-playbook site.yml
+```
+
+Default playbook should be `site.yml`.
+
+### Tasks
+
+Tasks are simple calls of ansible modules executed inside of playbooks.
+
+Tasks are minimal executable units in Ansible.
+
+There task for install package, copy file, create file from template, start systemd, run a Docker container, ...
+
+### Handlers
+
+Handlers are very similar to tasks, but they are executed only on updates of specific tasks.
+
+If you for example update Nginx configuration, you want to restart it. If not, you want to keep it running.
+
+### Roles
+
+Ansible role is an independent component which allows reuse of common configuration steps. You can write own roles (store in `roles/` directory) or you can use roles from Ansible Galaxy.
+
+### Role Directory Structure
+
+```
+myrole/       # role directory
+  tasks/      # ansible tasks
+  handlers/   # ansible handlers
+  templates/  # jinja2 Templates
+  files/      # role files
+  vars/       # role variables
+  defaults/   # default variables
+  meta/       # dependencies & Gallaxy config
+```
+
 ## Workshop Environment
 
 Our [Terraform provisioned](./terraform) environment on DigitalOcean. For each lab i have 2 VMs (`m = n*2`).
