@@ -3,6 +3,7 @@
 *.local.txt
 *.local.yml
 *.local.yaml
+*.local.md
 
 # Terraform
 .terraform
