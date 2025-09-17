@@ -1,6 +1,8 @@
 .vscode
 .DS_Store
 *.local.txt
+*.local.yml
+*.local.yaml
 
 # Terraform
 .terraform
