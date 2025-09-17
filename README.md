@@ -33,7 +33,7 @@ For sharing links & "secrets".
 
 ## Course
 
-### Workshop Environment
+## Workshop Environment
 
 Our [Terraform provisioned](./terraform) environment on DigitalOcean. For each lab i have 2 VMs (`m = n*2`).
 
@@ -62,11 +62,11 @@ ssh root@vm0.sikademo.com
 ssh root@vm1.sikademo.com
 ```
 
-### Install Ansible
+## Install Ansible
 
 -   Github - <https://github.com/ansible/ansible>
 
-#### Install Ansible using Pipx
+### Install Ansible using Pipx
 
 ```
 pipx install ansible
@@ -92,7 +92,7 @@ ln -s /Users/ondrej/.local/pipx/venvs/ansible/bin/ansible /Users/ondrej/bin
 ln -s /Users/ondrej/.local/pipx/venvs/ansible/bin/ansible-playbook /Users/ondrej/bin
 ```
 
-#### Install Ansible using Pip
+### Install Ansible using Pip
 
 ```
 pip3 install ansible
@@ -102,7 +102,7 @@ pip3 install ansible
 ansible --version
 ```
 
-#### Install Ansible on Workshop Environment
+### Install Ansible on Workshop Environment
 
 ```
 apt-get update && apt-get install -y python3 python3-pip && pip3 install ansible
@@ -112,7 +112,7 @@ apt-get update && apt-get install -y python3 python3-pip && pip3 install ansible
 ansible --version
 ```
 
-#### Install Ansible using Pipenv
+### Install Ansible using Pipenv
 
 ```
 pipenv --python 3.7
@@ -130,7 +130,7 @@ pipenv install ansible
 ansible --version
 ```
 
-### Ansible.cfg
+## Ansible.cfg
 
 Main ansible configuration file. [Docs](https://docs.ansible.com/ansible/latest/reference_appendices/config.html)
 
@@ -151,7 +151,7 @@ interpreter_python=/usr/bin/python3
 roles_path=roles
 ```
 
-### Inventory
+## Inventory
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html)
 
@@ -185,13 +185,13 @@ or `slu ondrejsika dogsay`
 ansible all -a 'slu ondrejsika dogsay Woof!'
 ```
 
-### Inventory with Groups
+## Inventory with Groups
 
 ```
 ansible -i hosts-with-groups.ini all -m ping
 ```
 
-### Inventory in YAML
+## Inventory in YAML
 
 See `hosts.yml`
 
@@ -209,7 +209,7 @@ Try:
 ansible -i hosts-with-groups.yml all -m ping
 ```
 
-### Dynamic Inventory
+## Dynamic Inventory
 
 See `hosts.py`
 
@@ -219,7 +219,7 @@ Try:
 ansible -i hosts.py all -m ping
 ```
 
-### Dynamic Inventory from Terraform
+## Dynamic Inventory from Terraform
 
 See `terraform-hosts.sh`
 
@@ -229,9 +229,9 @@ Example:
 ansible -i terraform-hosts.sh all -m ping
 ```
 
-### Modules
+## Modules
 
-#### Ping Module
+### Ping Module
 
 ```
 ansible all -m ping
@@ -241,7 +241,7 @@ ansible all -m ping
 ansible vm1.sikademo.com -m ping
 ```
 
-#### File Module
+### File Module
 
 ```
 ansible all -m file -a "path=/tmp/foo mode=600"
@@ -251,7 +251,7 @@ ansible all -m file -a "path=/tmp/foo mode=600"
 ansible all -m file -a "path=/tmp/foo mode=600 state=touch"
 ```
 
-#### Copy Module
+### Copy Module
 
 ```
 ansible all -m copy -a "src=hello.txt dest=/etc/motd"
@@ -267,7 +267,7 @@ and with dogsay
 ansible all -m copy -a "src=hello_dogsay.txt dest=/etc/motd"
 ```
 
-#### Setup Module
+### Setup Module
 
 Gather usefull information from target hosts
 
@@ -275,11 +275,11 @@ Gather usefull information from target hosts
 ansible all -m setup
 ```
 
-### Playbook
+## Playbook
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/playbooks.html)
 
-#### Cowsay Example
+### Cowsay Example
 
 Install Cowsay manually
 
@@ -299,19 +299,19 @@ Check it
 ansible all -a "/usr/games/cowsay hello"
 ```
 
-#### Ping Module
+### Ping Module
 
 ```
 ansible-playbook playbooks/ping.yml
 ```
 
-#### Debug Module
+### Debug Module
 
 ```
 ansible-playbook playbooks/debug.yml
 ```
 
-#### Pause Module
+### Pause Module
 
 Pause for 10 seconds:
 
@@ -325,7 +325,7 @@ Pause with prompt:
 ansible-playbook playbooks/prompt.yml
 ```
 
-#### Wait For Module
+### Wait For Module
 
 Wait for port example:
 
@@ -333,7 +333,7 @@ Wait for port example:
 ansible-playbook playbooks/wait-for-port.yml
 ```
 
-#### Nginx Example
+### Nginx Example
 
 Run playbook
 
@@ -343,7 +343,7 @@ ansible-playbook playbooks/nginx.yml
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
-#### Nginx Example with Jinja2 Template
+### Nginx Example with Jinja2 Template
 
 Run playbook
 
@@ -373,7 +373,7 @@ ansible-playbook playbooks/nginx2.yml -e '@playbooks/nginx2-vars.yml'
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
-#### Variables from Inventory
+### Variables from Inventory
 
 See the `hosts-with-variables.ini` and `hosts-with-group-variables.ini` inventories.
 
@@ -401,24 +401,24 @@ ansible-playbook -i hosts-with-variables.ini playbooks/nginx3.yml
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
-### Jinja2 Template Language
+## Jinja2 Template Language
 
 Jinja2 Homepage: <https://jinja.palletsprojects.com/>
 
-#### Variable
+### Variable
 
 ```jinja2
 <h1>Hello {{ your_name }}, how are you?</h1>
 ```
 
-#### If Condition
+### If Condition
 
 ```jinja2
 <h1>Hello {% if your_name %}{{ your_name }}{% else %}Unknown{% endif %}, how are you?</h1>
 <h1>Ahoj {% if jmeno %}{{ jmeno }}{% else %}Neznamy{% endif %}, jak se mas?</h1>
 ```
 
-#### For Loop
+### For Loop
 
 ```jinja2
 <ul>
@@ -448,7 +448,7 @@ ansible-playbook playbooks/nginx4.yml -e '{"your_name": "Johy", "jmeno": "Dela"}
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
-### Ansible Facts
+## Ansible Facts
 
 Get all available facts
 
@@ -462,7 +462,7 @@ Filter facts
 ansible all -m gather_facts -a filter=ansible_all_ipv4_addresses
 ```
 
-#### IP Address Example
+### IP Address Example
 
 Try:
 
@@ -472,7 +472,7 @@ ansible-playbook playbooks/nginx-facts.yml
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
-#### Custom Facts
+### Custom Facts
 
 Deploy & See facts
 
@@ -484,7 +484,7 @@ ansible-playbook playbooks/custom-facts.yml
 ansible all -m gather_facts -a filter=ansible_local
 ```
 
-### Loops
+## Loops
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/playbooks_loops.html)
 
@@ -494,17 +494,17 @@ Example:
 ansible-playbook playbooks/loop.yml
 ```
 
-### Conditionals
+## Conditionals
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/playbooks_conditionals.html)
 
-#### When
+### When
 
 ```
 ansible-playbook playbooks/when.yml
 ```
 
-### Register
+## Register
 
 ```
 ansible-playbook playbooks/register.yml
@@ -514,7 +514,7 @@ ansible-playbook playbooks/register.yml
 ansible-playbook playbooks/register-nginx.yml
 ```
 
-### Tags
+## Tags
 
 Run everything:
 
@@ -534,7 +534,7 @@ Run only tag `check`
 ansible-playbook playbooks/tags.yml --tags check
 ```
 
-### Handlers
+## Handlers
 
 ```
 ansible-playbook playbooks/handlers.yml
@@ -550,19 +550,19 @@ ansible-playbook playbooks/handlers2.yml
 
 And run again.
 
-### Norway Problem
+## Norway Problem
 
 ```
 ansible-playbook playbooks/norway.yml
 ```
 
-### Rescue (try/catch)
+## Rescue (try/catch)
 
 ```
 ansible-playbook playbooks/rescue.yml
 ```
 
-### Set Facts
+## Set Facts
 
 ```
 ansible-playbook playbooks/set_facts.yml
@@ -574,17 +574,17 @@ From command (like custom facts)
 ansible-playbook playbooks/set_facts_from_command.yml
 ```
 
-### Local Execution
+## Local Execution
 
 ```
 ansible-playbook playbooks/local.yml
 ```
 
-### Ansible Valult
+## Ansible Valult
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/vault.html)
 
-#### Encrypt a String
+### Encrypt a String
 
 ```
 
@@ -608,7 +608,7 @@ ansible-playbook --vault-password-file vault_password_file playbooks/nginx-secre
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
-#### Encrypt a File
+### Encrypt a File
 
 Create file vault `secrets.yml`
 
@@ -634,7 +634,7 @@ Encrypt data again
 ansible-vault encrypt secrets.yml
 ```
 
-#### Encrypted File Example
+### Encrypted File Example
 
 Use encrypted string:
 
@@ -648,13 +648,13 @@ ansible-playbook --vault-password-file vault_password_file playbooks/nginx-secre
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
-#### Example of encrypted playbook
+### Example of encrypted playbook
 
 ```
 ansible-playbook --vault-password-file vault_password_file playbooks/nginx_encrypted.yml
 ```
 
-### Docker Example
+## Docker Example
 
 Remove Nginx by:
 
@@ -682,17 +682,17 @@ If you want to remove those Docker containers, run:
 ansible-playbook playbooks/docker-hello-world-cleanup.yml
 ```
 
-### Import Playbook
+## Import Playbook
 
 ```
 ansible-playbook playbooks/nginx-pages.yml
 ```
 
-### Ansible Roles
+## Ansible Roles
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html)
 
-#### Role Directory Structure
+### Role Directory Structure
 
 -   `tasks` - contains the main list of tasks to be executed by the role.
 -   `handlers` - contains handlers, which may be used by this role or even anywhere outside this role.
@@ -702,7 +702,7 @@ ansible-playbook playbooks/nginx-pages.yml
 -   `templates` - contains templates which can be deployed via this role.
 -   `meta` - defines some meta data for this role. See below for more details.
 
-#### Example Role
+### Example Role
 
 See [nginx-hello](./playbooks/roles/nginx-hello) role.
 
@@ -714,11 +714,11 @@ ansible-playbook playbooks/role-nginx-hello.yml
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 
-#### Ansible Galaxy
+### Ansible Galaxy
 
 <https://galaxy.ansible.com/>
 
-### AWX
+## AWX
 
 AWX provides a web-based user interface, REST API, and task engine built on top of Ansible.
 
@@ -803,7 +803,7 @@ https://awx.sikademo.com/#/templates
 
 https://awx.sikademo.com/#/jobs
 
-### Examples
+## Examples
 
 -   HAProxy + Nginx Example - <https://github.com/ondrejsika/ansible-example-nginx-haproxy>
 -   <https://github.com/ondrejsika/example-ansible-monorepo>
