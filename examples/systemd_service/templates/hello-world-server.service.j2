@@ -1,0 +1,17 @@
+[Unit]
+Description=Hello World Server
+After=network.target
+
+[Service]
+Type=simple
+Environment="TEXT=Hello from Ansible"
+Environment="COLOR=white"
+Environment="BACKGROUND_COLOR=#C21B17"
+ExecStart=/usr/local/bin/hello-world-server
+Restart=on-failure
+RestartSec=5s
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
