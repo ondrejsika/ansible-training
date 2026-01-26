@@ -16,6 +16,18 @@
 {% endfor %}
 </ul>
 
+<ul>
+{% for country in capitals.keys() %}
+<li>{{ country }}</li>
+{% endfor %}
+</ul>
+
+<ul>
+{% for city in capitals.values() %}
+<li>{{ city }}</li>
+{% endfor %}
+</ul>
+
 <table border="1">
 {% for row in matrix %}
   <tr>
