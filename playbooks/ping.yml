@@ -1,5 +1,5 @@
 ---
-- name: Debug Example
+- name: Ping Example
   hosts: all
   gather_facts: false
 
