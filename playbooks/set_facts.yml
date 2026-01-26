@@ -5,13 +5,13 @@
 
   tasks:
     - set_fact:
-        list: []
+        my_list: []
 
     - set_fact:
-        list: "{{ list + [0] }}"
+        my_list: "{{ my_list + [0] }}"
 
     - set_fact:
-        list: "{{ list + [1] }}"
+        my_list: "{{ my_list + [1] }}"
 
     - debug:
-        msg: "{{ list }}"
+        msg: "{{ my_list }}"
