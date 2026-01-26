@@ -17,3 +17,7 @@
         owner: root
         group: root
         mode: 0644
+
+    - name: See
+      debug:
+        msg: "See: http://{{ ansible_host }}"
