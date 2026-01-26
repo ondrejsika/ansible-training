@@ -1,0 +1,10 @@
+---
+- name: Uninstall Cowsay Locally
+  hosts: 127.0.0.1
+  gather_facts: false
+
+  tasks:
+    - name: Uninstall Cowsay
+      apt:
+        name: cowsay
+        state: absent
