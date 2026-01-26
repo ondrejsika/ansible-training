@@ -13,6 +13,7 @@
         mode: 0644
       notify:
         - cat file
+
   handlers:
     - name: cat file
       shell:
@@ -20,6 +21,7 @@
       register: cat_file
       notify:
         - debug
+
     - name: debug
       debug:
         msg: "{{ cat_file.stdout }}"
