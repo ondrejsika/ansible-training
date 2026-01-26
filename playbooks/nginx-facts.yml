@@ -1,6 +1,7 @@
 ---
 - name: Setup Web Server
   hosts: all
+
   tasks:
     - name: Install Nginx
       apt:
