@@ -16,3 +16,8 @@
         msg: "Test something"
       tags:
         - test
+    - debug:
+        msg: "Cleanup / Uninstall something"
+      tags:
+        - never # special tag
+        - cleanup

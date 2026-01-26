@@ -3,10 +3,12 @@
     name: nginx
     update_cache: yes
     state: present
+
 - name: Start Nginx Service
   service:
     name: nginx
     state: started
+
 - name: Copy index.html from template
   template:
     src: index.html.j2
