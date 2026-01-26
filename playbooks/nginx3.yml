@@ -2,6 +2,7 @@
 - name: Setup Web Server
   hosts: all
   gather_facts: false
+
   tasks:
     - name: Install Nginx
       apt:
