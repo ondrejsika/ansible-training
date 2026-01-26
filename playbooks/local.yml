@@ -9,4 +9,4 @@
       register: "output"
 
     - debug:
-        var: output.stdout_lines
+        msg: "{{ output.stdout_lines }}"
