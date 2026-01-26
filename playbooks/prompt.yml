@@ -7,7 +7,7 @@
     - name: First message
       debug:
         msg: Hello
-    - name: Sleep 10 secs
+    - name: Confirm it
       pause:
         prompt: Press enter to continue
     - name: Last message
