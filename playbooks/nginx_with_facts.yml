@@ -1,0 +1,27 @@
+---
+- name: Setup Web Server
+  hosts: all
+
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        update_cache: yes
+        state: present
+
+    - name: Start Nginx
+      service:
+        name: nginx
+        state: started
+
+    - name: Copy index.html
+      copy:
+        src: index.html
+        dest: /var/www/html
+        owner: root
+        group: root
+        mode: 0644
+
+    - name: See
+      debug:
+        msg: "See: http://{{ ansible_host }} or http://{{ ansible_facts.eth0.ipv4.address }}"
