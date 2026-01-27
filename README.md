@@ -700,6 +700,28 @@ Run only tag `check`
 ansible-playbook playbooks/tags.yml --tags check
 ```
 
+## Skiped Tasks
+
+```
+ansible-playbook playbooks/skip.yml
+```
+
+![](_images/display_skipped_hosts_true.png)
+
+## Skiped Task with display_skipped_hosts=False
+
+in `ansible.cfg`
+
+```ini
+display_skipped_hosts = False
+```
+
+```
+ansible-playbook playbooks/skip.yml
+```
+
+![](_images/display_skipped_hosts_false.png)
+
 ## Handlers
 
 ```
