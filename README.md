@@ -201,31 +201,33 @@ myrole/       # role directory
 
 ## Workshop Environment
 
-Our [Terraform provisioned](./terraform) environment on DigitalOcean. For each lab i have 2 VMs (`m = n*2`).
-
 Lab
 
 ```
-ssh root@lab<n>.sikademo.com
+ssh root@labX.sikademo.com
 ```
 
-Target VMs
+where `X` is your lab number.
 
-```
-ssh root@vm<m>.sikademo.com
-```
-
-Example
+For example for lab0:
 
 ```
 ssh root@lab0.sikademo.com
 ```
 
-Managed VMs
+VS Code for lab0 is available at <https://code0.sikademo.com>
+
+Target VMs
 
 ```
-ssh root@vm0.sikademo.com
-ssh root@vm1.sikademo.com
+ssh root@labX-vmY.sikademo.com
+```
+
+Everyone has two VMs, for example for lab0:
+
+```
+ssh root@lab0-vm0.sikademo.com
+ssh root@lab0-vm1.sikademo.com
 ```
 
 ## Install Ansible
