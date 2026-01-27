@@ -562,7 +562,7 @@ Check new inventory `host-sn2` and apply:
 
 ```
 cat hosts-with-group-variables.ini
-ansible-playbook -i hosts-with-variables.ini playbooks/nginx3.yml
+ansible-playbook -i hosts-with-group-variables.ini playbooks/nginx3.yml
 ```
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
