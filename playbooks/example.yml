@@ -1,0 +1,20 @@
+---
+- name: First Play
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: First Task
+      ping:
+    - name: Second Task
+      ping:
+
+- name: Second Play
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: First Task, Second Play
+      ping:
+    - name: Second Task, Second Play
+      ping:
