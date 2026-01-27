@@ -1,0 +1,16 @@
+---
+- name: Another Register Example
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        update_cache: yes
+        state: present
+      register: install_nginx
+
+    - name: Print install_nginx variable
+      debug:
+        var: install_nginx
