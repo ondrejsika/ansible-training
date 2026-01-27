@@ -1,0 +1,8 @@
+all:
+  hosts:
+    lab0-vm0.sikademo.com:
+      your_name: Dela
+      server_name: ant
+    lab0-vm1.sikademo.com:
+      your_name: Nela
+      server_name: bee
