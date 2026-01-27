@@ -1,6 +1,6 @@
 ---
 - name: Setup vm0
-  hosts: vm0.sikademo.com
+  hosts: lab0-vm0.sikademo.com
 
   vars:
     your_name: Ondrej
@@ -14,7 +14,7 @@
         msg: "See: http://{{ ansible_host }}"
 
 - name: Setup vm1
-  hosts: vm1.sikademo.com
+  hosts: lab0-vm1.sikademo.com
 
   roles:
     - nginx-hello

@@ -30,10 +30,10 @@ resource "awx_inventory" "ondrejsika" {
 # https://registry.terraform.io/providers/denouche/awx/latest/docs/resources/host
 resource "awx_host" "ondrejsika" {
   for_each = {
-    "vm0.sikademo.com" = null
-    "vm1.sikademo.com" = null
-    "vm2.sikademo.com" = null
-    "vm3.sikademo.com" = null
+    "lab0-vm0.sikademo.com" = null
+    "lab0-vm1.sikademo.com" = null
+    "lab0-vm2.sikademo.com" = null
+    "lab0-vm3.sikademo.com" = null
   }
   name         = each.key
   inventory_id = awx_inventory.ondrejsika.id

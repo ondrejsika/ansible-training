@@ -406,7 +406,7 @@ ansible all -m ping
 ```
 
 ```
-ansible vm1.sikademo.com -m ping
+ansible lab0-vm1.sikademo.com -m ping
 ```
 
 ### File Module
@@ -529,7 +529,7 @@ Run playbook
 ansible-playbook playbooks/nginx.yml
 ```
 
-See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
+See: <http://lab0-vm0.sikademo.com/> and <http://lab0-vm1.sikademo.com/>
 
 ### Nginx Example with Jinja2 Template
 
@@ -539,7 +539,7 @@ Run playbook
 ansible-playbook playbooks/nginx2.yml
 ```
 
-See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
+See: <http://lab0-vm0.sikademo.com/> and <http://lab0-vm1.sikademo.com/>
 
 Try with variables defined as an argument `-e` or `--extra-vars`:
 
@@ -551,7 +551,7 @@ ansible-playbook playbooks/nginx2.yml -e your_name=Dela
 ansible-playbook playbooks/nginx2.yml -e '{"your_name": "Nela"}'
 ```
 
-See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
+See: <http://lab0-vm0.sikademo.com/> and <http://lab0-vm1.sikademo.com/>
 
 Try with variables defined in the file:
 
@@ -559,7 +559,7 @@ Try with variables defined in the file:
 ansible-playbook playbooks/nginx2.yml -e '@playbooks/nginx2-vars.yml'
 ```
 
-See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
+See: <http://lab0-vm0.sikademo.com/> and <http://lab0-vm1.sikademo.com/>
 
 ### Variables from Inventory
 
@@ -578,7 +578,7 @@ cat hosts-with-variables.ini
 ansible-playbook -i hosts-with-variables.ini playbooks/nginx3.yml
 ```
 
-See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
+See: <http://lab0-vm0.sikademo.com/> and <http://lab0-vm1.sikademo.com/>
 
 Check new inventory `host-sn2` and apply:
 
@@ -587,7 +587,7 @@ cat hosts-with-group-variables.ini
 ansible-playbook -i hosts-with-group-variables.ini playbooks/nginx3.yml
 ```
 
-See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
+See: <http://lab0-vm0.sikademo.com/> and <http://lab0-vm1.sikademo.com/>
 
 ## Jinja2 Template Language
 
@@ -622,7 +622,7 @@ Try:
 ansible-playbook playbooks/nginx4.yml
 ```
 
-See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
+See: <http://lab0-vm0.sikademo.com/> and <http://lab0-vm1.sikademo.com/>
 
 Try with variables defined as an argument:
 
@@ -634,7 +634,7 @@ ansible-playbook playbooks/nginx4.yml -e your_name=Zuz -e jmeno=Nela
 ansible-playbook playbooks/nginx4.yml -e '{"your_name": "Johy", "jmeno": "Dela"}'
 ```
 
-See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
+See: <http://lab0-vm0.sikademo.com/> and <http://lab0-vm1.sikademo.com/>
 
 ## Ansible Facts
 
@@ -658,7 +658,7 @@ Try:
 ansible-playbook playbooks/nginx-facts.yml
 ```
 
-See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
+See: <http://lab0-vm0.sikademo.com/> and <http://lab0-vm1.sikademo.com/>
 
 ### Custom Facts
 
@@ -836,7 +836,7 @@ ansible-playbook --ask-vault-pass playbooks/nginx-secret.yml
 ansible-playbook --vault-password-file .vault_password playbooks/nginx-secret.yml
 ```
 
-See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
+See: <http://lab0-vm0.sikademo.com/> and <http://lab0-vm1.sikademo.com/>
 
 ### Encrypt a File
 
@@ -876,7 +876,7 @@ ansible-playbook --ask-vault-pass playbooks/nginx-secret2.yml
 ansible-playbook --vault-password-file .vault_password playbooks/nginx-secret2.yml
 ```
 
-See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
+See: <http://lab0-vm0.sikademo.com/> and <http://lab0-vm1.sikademo.com/>
 
 ### Example of encrypted playbook
 
@@ -904,7 +904,7 @@ Run Docker example:
 ansible-playbook playbooks/docker-hello-world.yml
 ```
 
-See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
+See: <http://lab0-vm0.sikademo.com/> and <http://lab0-vm1.sikademo.com/>
 
 If you want to remove those Docker containers, run:
 
@@ -942,7 +942,7 @@ Use it:
 ansible-playbook playbooks/role-nginx-hello.yml
 ```
 
-See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
+See: <http://lab0-vm0.sikademo.com/> and <http://lab0-vm1.sikademo.com/>
 
 ### Ansible Galaxy
 
