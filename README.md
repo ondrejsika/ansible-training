@@ -453,7 +453,13 @@ Install Cowsay manually
 ansible vm0.sikademo.com -m apt -a "name=cowsay update_cache=yes state=present"
 ```
 
-using playbook
+using playbook (dry run using `--check`)
+
+```
+ansible-playbook playbooks/cowsay.yml --check
+```
+
+run the playbook
 
 ```
 ansible-playbook playbooks/cowsay.yml
