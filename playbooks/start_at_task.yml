@@ -1,0 +1,12 @@
+---
+- name: Start At Task Example
+  hosts: 127.0.0.1
+  gather_facts: false
+
+  tasks:
+    - name: First Task
+      ping:
+    - name: Second Task
+      ping:
+    - name: Third Task
+      ping:
