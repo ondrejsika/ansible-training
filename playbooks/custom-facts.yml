@@ -8,10 +8,19 @@
       file:
         path: /etc/ansible/facts.d
         state: directory
+
     - name: Copy getdate.fact
       copy:
         src: getdate.fact
         dest: /etc/ansible/facts.d/getdate.fact
+        owner: root
+        group: root
+        mode: 0755
+
+    - name: Copy sluversion.fact
+      copy:
+        src: sluversion.fact
+        dest: /etc/ansible/facts.d/sluversion.fact
         owner: root
         group: root
         mode: 0755
@@ -36,3 +45,7 @@
     - name: See facts again (Python syntax)
       debug:
         msg: "{{ ansible_facts['ansible_local']['getdate'] }}"
+
+    - name: See slu version
+      debug:
+        msg: "{{ ansible_local.sluversion }}"
