@@ -1,0 +1,13 @@
+---
+- name: Loop Example with range
+  hosts: 127.0.0.1
+  gather_facts: false
+
+  tasks:
+    - debug:
+        msg: "item {{ item }}"
+      loop: "{{ range(5) | list }}"
+
+    - debug:
+        msg: "item {{ item }}"
+      loop: "{{ range(count | default(0) | int) | list }}"
