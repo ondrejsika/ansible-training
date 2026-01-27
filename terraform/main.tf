@@ -75,6 +75,14 @@ output "ips" {
 
 output "ansible-hosts" {
   value = {
+    "_meta" : {
+      "hostvars" : {
+        for prefix in local.vm_prefixes :
+        cloudflare_record.vm[prefix].hostname => {
+          "ansible_host" : cloudflare_record.vm[prefix].value
+        }
+      }
+    },
     "all" : {
       "hosts" : [
         for prefix in local.vm_prefixes :
