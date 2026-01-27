@@ -1,0 +1,14 @@
+---
+- name: Skip Example
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: OK
+      debug:
+        msg: "OK"
+
+    - name: Skipped
+      debug:
+        msg: "Skipped"
+      when: false
