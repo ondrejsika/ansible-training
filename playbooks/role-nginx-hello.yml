@@ -8,8 +8,18 @@
   roles:
     - nginx-hello
 
+  tasks:
+    - name: See
+      debug:
+        msg: "See: http://{{ ansible_host }}"
+
 - name: Setup vm1
   hosts: vm1.sikademo.com
 
   roles:
     - nginx-hello
+
+  tasks:
+    - name: See
+      debug:
+        msg: "See: http://{{ ansible_host }}"
