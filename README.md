@@ -422,7 +422,7 @@ ansible all -m file -a "path=/tmp/foo mode=600 state=touch"
 ### Copy Module
 
 ```
-ansible all -m copy -a "src=hello.txt dest=/etc/motd"
+ansible all -m copy -a "src=examples/hello.txt dest=/etc/motd"
 ```
 
 ```
