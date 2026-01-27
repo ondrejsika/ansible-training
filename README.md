@@ -932,7 +932,7 @@ ansible-playbook playbooks/nginx-pages.yml
 
 ### Example Role
 
-See [nginx-hello](./playbooks/roles/nginx-hello) role.
+See [nginx-hello](./roles/nginx-hello) role.
 
 Use it:
 
