@@ -10,10 +10,6 @@ locals {
   ]), local.extra_vm_prefixes)
 }
 
-output "vm_prefixes" {
-  value = local.vm_prefixes
-}
-
 data "digitalocean_ssh_key" "ondrejsika" {
   name = "ondrejsika"
 }
