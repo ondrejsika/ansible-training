@@ -23,9 +23,9 @@ Also, feel free to propose improvements by creating issues.
 
 For sharing links & "secrets".
 
--   Slack - https://sikapublic.slack.com/
--   Microsoft Teams
--   https://sika.link/chat (tlk.io)
+- Slack - https://sikapublic.slack.com/
+- Microsoft Teams
+- https://sika.link/chat (tlk.io)
 
 ## Course
 
@@ -37,21 +37,21 @@ Ansible is an open-source software provisioning, configuration management, and a
 
 ### Ansible Use Cases
 
--   Server configuration
--   Installation of software
--   Application Deployment
--   Batch Tasks
+- Server configuration
+- Installation of software
+- Application Deployment
+- Batch Tasks
 
 ### Key Ansible Features
 
--   Declarative configuration language
--   Git versioned configuration, Collaboration
--   Parallel execution / deployment on many servers
--   No Agents (just SSH connection)
--   Written in Python (not Ruby)
--   Absence of state
--   Encrypted storage for sensitive data
--   Large Community, Ansible Galaxy
+- Declarative configuration language
+- Git versioned configuration, Collaboration
+- Parallel execution / deployment on many servers
+- No Agents (just SSH connection)
+- Written in Python (not Ruby)
+- Absence of state
+- Encrypted storage for sensitive data
+- Large Community, Ansible Galaxy
 
 #### Declarative configuration language
 
@@ -135,14 +135,14 @@ pipenv install ansible
 
 ### Ansible Directory Structure
 
--   `ansible.cfg`- main ansible config
--   `hosts.yml`- inventory (host config)
--   `group_vars/`- group specific variables
--   `host_vars/`- host specific variables
--   `roles/`- your roles
--   `site.yml`- master playbook
--   `web.yml`- playbook for web servers
--   `proxy.yml`- playbook for proxy servers
+- `ansible.cfg`- main ansible config
+- `hosts.yml`- inventory (host config)
+- `group_vars/`- group specific variables
+- `host_vars/`- host specific variables
+- `roles/`- your roles
+- `site.yml`- master playbook
+- `web.yml`- playbook for web servers
+- `proxy.yml`- playbook for proxy servers
 
 ### Inventory
 
@@ -230,7 +230,7 @@ ssh root@vm1.sikademo.com
 
 ## Install Ansible
 
--   Github - <https://github.com/ansible/ansible>
+- Github - <https://github.com/ansible/ansible>
 
 ### Install Ansible using Pipx
 
@@ -302,10 +302,10 @@ Main ansible configuration file. [Docs](https://docs.ansible.com/ansible/latest/
 
 Location:
 
--   `ANSIBLE_CONFIG` (environment variable if set)
--   `ansible.cfg` (in the current directory)
--   `~/.ansible.cfg` (in the home directory)
--   `/etc/ansible/ansible.cfg`
+- `ANSIBLE_CONFIG` (environment variable if set)
+- `ansible.cfg` (in the current directory)
+- `~/.ansible.cfg` (in the home directory)
+- `/etc/ansible/ansible.cfg`
 
 Our `ansible.cfg`:
 
@@ -860,13 +860,13 @@ ansible-playbook playbooks/nginx-pages.yml
 
 ### Role Directory Structure
 
--   `tasks` - contains the main list of tasks to be executed by the role.
--   `handlers` - contains handlers, which may be used by this role or even anywhere outside this role.
--   `defaults` - default variables for the role (see Using Variables for more information).
--   `vars` - other variables for the role (see Using Variables for more information).
--   `files` - contains files which can be deployed via this role.
--   `templates` - contains templates which can be deployed via this role.
--   `meta` - defines some meta data for this role. See below for more details.
+- `tasks` - contains the main list of tasks to be executed by the role.
+- `handlers` - contains handlers, which may be used by this role or even anywhere outside this role.
+- `defaults` - default variables for the role (see Using Variables for more information).
+- `vars` - other variables for the role (see Using Variables for more information).
+- `files` - contains files which can be deployed via this role.
+- `templates` - contains templates which can be deployed via this role.
+- `meta` - defines some meta data for this role. See below for more details.
 
 ### Example Role
 
@@ -950,8 +950,8 @@ https://awx.sikademo.com/#/inventories
 
 https://awx.sikademo.com/#/credentials
 
--   Machines (SSH)
--   Source Control (GIT)
+- Machines (SSH)
+- Source Control (GIT)
 
 ### AWX Hosts
 
@@ -971,48 +971,48 @@ https://awx.sikademo.com/#/jobs
 
 ## Examples
 
--   HAProxy + Nginx Example - <https://github.com/ondrejsika/ansible-example-nginx-haproxy>
--   <https://github.com/ondrejsika/example-ansible-monorepo>
--   Docker Compose Example - <https://github.com/ondrejsika/ansible-docker-compose--example/>
--   AWX Example - <https://github.com/ondrejsika/example-awx-playbooks>
+- HAProxy + Nginx Example - <https://github.com/ondrejsika/ansible-example-nginx-haproxy>
+- <https://github.com/ondrejsika/example-ansible-monorepo>
+- Docker Compose Example - <https://github.com/ondrejsika/ansible-docker-compose--example/>
+- AWX Example - <https://github.com/ondrejsika/example-awx-playbooks>
 
 ## Resources & Used Modules
 
--   Inventory - https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
--   Playbooks - https://docs.ansible.com/ansible/latest/user_guide/playbooks.html
--   Playbooks Best Practices - https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html
--   Variables - https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html
--   Filters - https://docs.ansible.com/ansible/latest/user_guide/playbooks_filters.html
--   Valult - https://docs.ansible.com/ansible/latest/user_guide/vault.html
--   Using Vault in playbooks - https://docs.ansible.com/ansible/latest/user_guide/playbooks_vault.html
--   Roles - https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html
--   Loops - https://docs.ansible.com/ansible/latest/user_guide/playbooks_loops.htm
--   Conditionals - https://docs.ansible.com/ansible/latest/user_guide/playbooks_conditionals.html
+- Inventory - https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
+- Playbooks - https://docs.ansible.com/ansible/latest/user_guide/playbooks.html
+- Playbooks Best Practices - https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html
+- Variables - https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html
+- Filters - https://docs.ansible.com/ansible/latest/user_guide/playbooks_filters.html
+- Valult - https://docs.ansible.com/ansible/latest/user_guide/vault.html
+- Using Vault in playbooks - https://docs.ansible.com/ansible/latest/user_guide/playbooks_vault.html
+- Roles - https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html
+- Loops - https://docs.ansible.com/ansible/latest/user_guide/playbooks_loops.htm
+- Conditionals - https://docs.ansible.com/ansible/latest/user_guide/playbooks_conditionals.html
 
 Modules:
 
--   All modules (index) - https://docs.ansible.com/ansible/latest/modules/modules_by_category.html
--   Apt - https://docs.ansible.com/ansible/latest/modules/apt_module.html
--   User - https://docs.ansible.com/ansible/latest/modules/user_module.html
--   Line in file - https://docs.ansible.com/ansible/latest/modules/lineinfile_module.html
--   Authorized Key - https://docs.ansible.com/ansible/latest/modules/authorized_key_module.html
--   Copy - https://docs.ansible.com/ansible/latest/modules/copy_module.html
--   Template - https://docs.ansible.com/ansible/latest/modules/template_module.html
--   Docker Container - https://docs.ansible.com/ansible/latest/modules/docker_container_module.html
--   Pip - https://docs.ansible.com/ansible/latest/modules/pip_module.html
--   OpenSSH Keypair - https://docs.ansible.com/ansible/latest/modules/openssh_keypair_module.html
--   Fetch (Copy from remote to local) - https://docs.ansible.com/ansible/latest/modules/fetch_module.html
--   Wait for - https://docs.ansible.com/ansible/latest/modules/wait_for_module.html
+- All modules (index) - https://docs.ansible.com/ansible/latest/modules/modules_by_category.html
+- Apt - https://docs.ansible.com/ansible/latest/modules/apt_module.html
+- User - https://docs.ansible.com/ansible/latest/modules/user_module.html
+- Line in file - https://docs.ansible.com/ansible/latest/modules/lineinfile_module.html
+- Authorized Key - https://docs.ansible.com/ansible/latest/modules/authorized_key_module.html
+- Copy - https://docs.ansible.com/ansible/latest/modules/copy_module.html
+- Template - https://docs.ansible.com/ansible/latest/modules/template_module.html
+- Docker Container - https://docs.ansible.com/ansible/latest/modules/docker_container_module.html
+- Pip - https://docs.ansible.com/ansible/latest/modules/pip_module.html
+- OpenSSH Keypair - https://docs.ansible.com/ansible/latest/modules/openssh_keypair_module.html
+- Fetch (Copy from remote to local) - https://docs.ansible.com/ansible/latest/modules/fetch_module.html
+- Wait for - https://docs.ansible.com/ansible/latest/modules/wait_for_module.html
 
 Roles:
 
--   `geerlingguy.docker` - [Ansible Galaxy](https://galaxy.ansible.com/geerlingguy/docker), [Github](https://github.com/geerlingguy/ansible-role-docker)
--   `geerlingguy.ntp` - [Ansible Galaxy](https://galaxy.ansible.com/geerlingguy/ntp), [Github](https://github.com/geerlingguy/ansible-role-ntp)
+- `geerlingguy.docker` - [Ansible Galaxy](https://galaxy.ansible.com/geerlingguy/docker), [Github](https://github.com/geerlingguy/ansible-role-docker)
+- `geerlingguy.ntp` - [Ansible Galaxy](https://galaxy.ansible.com/geerlingguy/ntp), [Github](https://github.com/geerlingguy/ansible-role-ntp)
 
 CLI:
 
--   Ping - https://docs.ansible.com/ansible/latest/modules/ping_module.html
--   Gather Facts - https://docs.ansible.com/ansible/latest/modules/gather_facts_module.html
+- Ping - https://docs.ansible.com/ansible/latest/modules/ping_module.html
+- Gather Facts - https://docs.ansible.com/ansible/latest/modules/gather_facts_module.html
 
 ## Thank you! & Questions?
 
@@ -1020,11 +1020,11 @@ That's it. Do you have any questions? **Let's go for a beer!**
 
 ### Ondrej Sika
 
--   email: <ondrej@sika.io>
--   web: <https://sika.io>
--   twitter: [@ondrejsika](https://twitter.com/ondrejsika)
--   linkedin: [/in/ondrejsika/](https://linkedin.com/in/ondrejsika/)
--   Newsletter, Slack, Facebook & Linkedin Groups: <https://join.sika.io>
+- email: <ondrej@sika.io>
+- web: <https://sika.io>
+- twitter: [@ondrejsika](https://twitter.com/ondrejsika)
+- linkedin: [/in/ondrejsika/](https://linkedin.com/in/ondrejsika/)
+- Newsletter, Slack, Facebook & Linkedin Groups: <https://join.sika.io>
 
 _Do you like the course? Write me a recommendation on Twitter (with handle `@ondrejsika`) and LinkedIn (add me [/in/ondrejsika](https://www.linkedin.com/in/ondrejsika/) and I'll send you Request for the recommendation). **Thanks**._
 
