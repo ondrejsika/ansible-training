@@ -1,0 +1,5 @@
+locals {
+  lab_count         = 2
+  vm_count          = 4
+  extra_vm_prefixes = ["lab0-custom-vm0", "lab1-custom-vm0"]
+}
