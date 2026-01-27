@@ -795,7 +795,7 @@ ansible-vault encrypt_string --name 'secret' 'secret-foo-key'
 ```
 
 ```
-ansible-vault encrypt_string --vault-password-file vault_password_file 'secret' --name 'secret-bar-key'
+ansible-vault encrypt_string --vault-password-file .vault_password 'secret' --name 'secret-bar-key'
 ```
 
 You can set a `vault_password_file` in `ansible.cfg`:
@@ -811,7 +811,7 @@ ansible-playbook --ask-vault-pass playbooks/nginx-secret.yml
 ```
 
 ```
-ansible-playbook --vault-password-file vault_password_file playbooks/nginx-secret.yml
+ansible-playbook --vault-password-file .vault_password playbooks/nginx-secret.yml
 ```
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
@@ -851,7 +851,7 @@ ansible-playbook --ask-vault-pass playbooks/nginx-secret2.yml
 ```
 
 ```
-ansible-playbook --vault-password-file vault_password_file playbooks/nginx-secret2.yml
+ansible-playbook --vault-password-file .vault_password playbooks/nginx-secret2.yml
 ```
 
 See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
@@ -859,7 +859,7 @@ See: <http://vm0.sikademo.com/> and <http://vm1.sikademo.com/>
 ### Example of encrypted playbook
 
 ```
-ansible-playbook --vault-password-file vault_password_file playbooks/nginx_encrypted.yml
+ansible-playbook --vault-password-file .vault_password playbooks/nginx_encrypted.yml
 ```
 
 ## Docker Example
