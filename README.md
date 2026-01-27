@@ -798,6 +798,12 @@ ansible-vault encrypt_string --name 'secret' 'secret-foo-key'
 ansible-vault encrypt_string --vault-password-file vault_password_file 'secret' --name 'secret-bar-key'
 ```
 
+You can set a `vault_password_file` in `ansible.cfg`:
+
+```ini
+vault_password_file = .vault_password
+```
+
 Use encrypted string:
 
 ```
