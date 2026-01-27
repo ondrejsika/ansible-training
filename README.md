@@ -452,7 +452,7 @@ ansible all -m setup
 Install Cowsay manually
 
 ```
-ansible vm0.sikademo.com -m apt -a "name=cowsay update_cache=yes state=present"
+ansible lab0-vm0.sikademo.com -m apt -a "name=cowsay update_cache=yes state=present"
 ```
 
 using playbook (dry run using `--check`)
