@@ -5,12 +5,14 @@ servers:
 
 web:
   hosts:
-    vm[0:1].sikademo.com:
+    lab0-vm0.sikademo.com:
+    lab0-vm1.sikademo.com:
 
 db:
   hosts:
-    vm[2:3].sikademo.com:
+    lab0-vm2.sikademo.com:
+    lab0-vm3.sikademo.com:
 
 router:
   hosts:
-    vm[4:5].sikademo.com:
+    lab0-vm4.sikademo.com:

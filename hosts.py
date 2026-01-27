@@ -9,9 +9,9 @@ print(
             "all": {
                 "hosts": random.choice(
                     [
-                        ["vm0.sikademo.com"],
-                        ["vm1.sikademo.com"],
-                        ["vm0.sikademo.com", "vm1.sikademo.com"],
+                        ["lab0-vm0.sikademo.com"],
+                        ["lab0-vm1.sikademo.com"],
+                        ["lab0-vm0.sikademo.com", "lab0-vm1.sikademo.com"],
                     ]
                 )
             }
