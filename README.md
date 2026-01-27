@@ -660,6 +660,20 @@ Example:
 ansible-playbook playbooks/loop.yml
 ```
 
+Loop with `range`
+
+```
+ansible-playbook playbooks/loop_range.yml
+```
+
+```
+ansible-playbook playbooks/loop_range.yml -e count=1
+```
+
+```
+ansible-playbook playbooks/loop_range.yml -e count=3
+```
+
 ## Conditionals
 
 [Docs](https://docs.ansible.com/ansible/latest/user_guide/playbooks_conditionals.html)
