@@ -1,4 +1,4 @@
-[Ondrej Sika (sika.io)](https://sika.io) | <ondrej@sika.io> | [go to course ->](#course)
+[Ondrej Sika (sika.io)](https://sika.io) | <ondrej@sika.io> | [go to course ->](#course) | [**Skoleni Ansible**](https://ondrej-sika.cz/skoleni/ansible/) 🚀💻
 
 # Ansible Training
 
