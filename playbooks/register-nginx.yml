@@ -11,7 +11,7 @@
         name: nginx
         update_cache: yes
         state: present
-    - name: Copy index.html from template
+    - name: Render template index.register.html.j2 to index.html
       template:
         src: index.register.html.j2
         dest: /var/www/html/index.html
