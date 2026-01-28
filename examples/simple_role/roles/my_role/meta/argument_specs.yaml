@@ -1,0 +1,7 @@
+argument_specs:
+  main:
+    options:
+      my_role_message:
+        type: str
+        required: true
+        description: Message to display

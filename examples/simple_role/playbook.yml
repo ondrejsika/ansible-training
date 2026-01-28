@@ -1,0 +1,16 @@
+- hosts: 127.0.0.1
+  vars:
+    my_role_message: "Hello! (EN)"
+  roles:
+    - my_role
+
+- hosts: 127.0.0.1
+  roles:
+    - role: my_role
+      my_role_message: "Ahoj! (CS)"
+
+- hosts: 127.0.0.1
+  roles:
+    - role: my_role
+      vars:
+        my_role_message: "Hallo! (DE)"

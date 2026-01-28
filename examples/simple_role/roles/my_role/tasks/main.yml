@@ -1,0 +1,3 @@
+- name: Say
+  debug:
+    msg: "{{ my_role_message }}"
