@@ -4,19 +4,23 @@
   gather_facts: false
 
   tasks:
-    - debug:
+    - name: Check
+      debug:
         msg: "Check something"
       tags:
         - check
-    - debug:
+    - name: Install
+      debug:
         msg: "Install something"
       tags:
         - install
-    - debug:
+    - name: Test
+      debug:
         msg: "Test something"
       tags:
         - test
-    - debug:
+    - name: Clean Up
+      debug:
         msg: "Cleanup / Uninstall something"
       tags:
         - never # special tag
