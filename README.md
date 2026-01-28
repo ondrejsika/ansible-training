@@ -936,6 +936,18 @@ ansible-playbook playbooks/nginx-pages.yml
 - `templates` - contains templates which can be deployed via this role.
 - `meta` - defines some meta data for this role. See below for more details.
 
+### Role Usage Examples
+
+See [simple_role](./examples/simple_role) example.
+
+```
+make -C examples/simple_role run
+```
+
+```
+make -C examples/simple_role run_broken
+```
+
 ### Example Role
 
 See [nginx-hello](./roles/nginx-hello) role.
