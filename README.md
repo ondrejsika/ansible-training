@@ -829,6 +829,10 @@ vault_password_file = .vault_password
 Use encrypted string:
 
 ```
+ansible-playbook playbooks/encrypted_string.yml
+```
+
+```
 ansible-playbook --ask-vault-pass playbooks/nginx-secret.yml
 ```
 
